@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en" class="js-anim">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>EMFACE® for TMJ | Smile Brookline</title>
+<meta name="description" content="FDA-cleared EMFACE® retrains the jaw muscles behind TMJ pain. 20-minute sessions and no downtime, with Dr. Sara Stock in Brookline.">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.css">
+<script>
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.remove("js-anim");
+  window.__animationsBooted = false;
+  setTimeout(function () { if (!window.__animationsBooted) document.documentElement.classList.add("anim-failed"); }, 2000);
+</script>
+<style>
+:root{
+  --slate-deep:#22303A; --slate-ink:#23313B; --slate:#374953; --night:#1B262E;
+  --teal:#577C7C; --teal-text:#3F6B66; --teal-pale:#A8C4C1; --mist:#CBD8D6;
+  --gold:#936F38; --wash:#E8EFEE; --card:#F1F6F5; --rule:#DCE5E3;
+  --body:#5C6B70; --muted:#6B777A;
+  --pad-x:64px; --sec-y:clamp(80px,13.34vh,120px);
+  --font:"Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:auto}
+body{font-family:var(--font);color:var(--slate-ink);background:#fff;width:100%;min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+img,video,iframe{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input,textarea{font:inherit;color:inherit}
+svg.lucide{display:block;flex:none}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--teal-pale);outline-offset:2px}
+
+/* initial states for intro (JS reveals them), fail-open */
+.js-anim [data-intro]{opacity:0}
+.anim-failed [data-intro]{opacity:1!important;transform:none!important;visibility:visible!important}
+
+.section{width:100%;padding:var(--sec-y) var(--pad-x)}
+.h2{font-size:44px;line-height:1.2;font-weight:400;color:var(--slate-deep)}
+.h2 span{display:block;font-weight:600}
+.h2--light{color:#fff}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:100px;font-weight:600;font-size:13px;letter-spacing:.3px;line-height:1;text-transform:uppercase;white-space:nowrap;overflow:clip;will-change:transform}
+.btn--white{background:#fff;color:var(--slate-ink)}
+.btn--teal{background:var(--teal);color:#fff}
+.btn--lg{padding:20px 40px}
+.btn--md{padding:18px 36px}
+.btn--sm{padding:14px 28px;font-size:12px}
+.btn svg{width:16px;height:16px}
+
+/* ===== HERO ===== */
+.hero{position:relative;width:100%;height:100vh;height:100svh;min-height:0;overflow:hidden;color:#fff;background:var(--slate-deep);display:flex;flex-direction:column;justify-content:flex-end;padding:0 var(--pad-x) 64px}
+.hero__media{position:absolute;inset:0;z-index:0}
+.hero__media video{width:100%;height:100%;object-fit:cover}
+.hero__scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:
+  linear-gradient(180deg, rgba(27,38,46,.70) 0%, rgba(27,38,46,0) 18%),
+  linear-gradient(0deg, rgba(34,48,58,.95) 0%, rgba(34,48,58,.50) 35%, rgba(34,48,58,0) 60%),
+  linear-gradient(90deg, rgba(34,48,58,.93) 0%, rgba(34,48,58,.60) 45%, rgba(34,48,58,0) 80%)}
+.hero__bottom{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.hero__copy{width:780px;max-width:100%;display:flex;flex-direction:column;gap:28px}
+.hero__eyebrow{font-size:13px;font-weight:500;color:var(--teal-pale)}
+.hero__h1{font-size:72px;line-height:1.08;letter-spacing:-.5px;font-weight:400}
+.hero__h1 span{display:block}
+.hero__h1 span+span{font-weight:600}
+.hero__sub{width:600px;max-width:100%;font-size:17px;line-height:1.6;color:var(--mist)}
+.hero__cta{display:flex;align-items:center;gap:28px;padding-top:8px}
+.callstack{display:flex;flex-direction:column;gap:2px}
+.callstack small{font-size:13px;color:var(--teal-pale)}
+.callstack a{font-size:18px;font-weight:600;color:#fff}
+.offer{width:340px;flex:none;background:var(--card);border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:14px;color:var(--slate-ink)}
+.offer__top{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:500;color:var(--teal-text)}
+.offer__top svg{width:20px;height:20px;color:#fff}
+.offer__amt{display:flex;align-items:flex-end;gap:10px}
+.offer__amt b{font-size:64px;font-weight:600;letter-spacing:-1px;line-height:1;color:var(--gold)}
+.offer__amt span{font-size:28px;line-height:1.3}
+.offer__body{font-size:16px;font-weight:500;line-height:1.5}
+.offer__fine{font-size:13px;line-height:1.5;color:var(--body)}
+
+/* header */
+.bar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:28px var(--pad-x);color:#fff;transition:background-color .34s cubic-bezier(.16,1,.3,1),padding .34s cubic-bezier(.16,1,.3,1),backdrop-filter .34s}
+.bar.is-solid{background:rgba(27,38,46,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding-top:12px;padding-bottom:12px}
+.bar__logo img{width:150px;height:70px;object-fit:contain;transition:height .34s cubic-bezier(.16,1,.3,1)}
+.bar.is-solid .bar__logo img{height:52px}
+.bar__actions{display:flex;align-items:center;gap:28px}
+.bar__phone{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:500}
+.bar__phone svg{width:18px;height:18px;color:var(--teal-pale)}
+
+/* ===== PROOF BAR ===== */
+.proof{background:var(--night);padding:32px var(--pad-x);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.proof__item{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;color:var(--mist);white-space:nowrap}
+.proof__item svg{width:20px;height:20px;color:var(--teal-pale)}
+.proof__rating{gap:14px;color:#fff}
+.stars{display:flex;gap:3px;color:var(--gold)}
+.stars svg{width:18px;height:18px}
+
+/* ===== SYMPTOMS ===== */
+.symptoms{display:flex;flex-direction:column;gap:56px}
+.sec-head{width:760px;max-width:100%;display:flex;flex-direction:column;gap:20px}
+.sec-head p{font-size:17px;line-height:1.6;color:var(--body)}
+.sym-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.sym{position:relative;height:clamp(340px,51.2vh,460px);border-radius:16px;overflow:hidden;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;will-change:transform}
+.sym__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform-origin:center}
+.sym::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg, rgba(34,48,58,0) 35%, rgba(34,48,58,.90) 100%)}
+.sym h3{font-size:22px;font-weight:600;color:#fff}
+.sym p{margin-top:8px;font-size:15px;line-height:1.6;color:var(--mist)}
+
+/* ===== HOW IT WORKS ===== */
+.how{background:linear-gradient(125deg, #22303A 13%, #577C7C 87%);display:flex;flex-direction:column;gap:56px}
+.how__head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.how__head p{width:460px;max-width:100%;font-size:16px;line-height:1.6;color:var(--mist)}
+.how__media{position:relative;height:clamp(520px,75.6vh,680px);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate}
+.how__media>img{position:absolute;left:0;top:-8%;width:100%;height:116%;object-fit:cover;z-index:-2}
+.how__media::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg, rgba(34,48,58,0) 30%, rgba(34,48,58,.95) 100%)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px;padding:0 48px 48px}
+.step{padding-top:24px;border-top:1px solid rgba(255,255,255,.30);display:flex;flex-direction:column;gap:14px}
+.icon-circle{width:64px;height:64px;border-radius:100px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;flex:none}
+.icon-circle img{width:48px;height:48px}
+.step h3{font-size:20px;font-weight:600;color:#fff}
+.step p{font-size:15px;line-height:1.6;color:var(--mist)}
+
+/* ===== WHY A DENTIST ===== */
+.why{display:flex;align-items:center;gap:80px}
+.why__img{width:620px;height:clamp(420px,62.3vh,560px);flex:none;border-radius:18px;overflow:hidden}
+.why__img img,.bio__img img{width:100%;height:100%;object-fit:cover}
+.why__copy{flex:1;min-width:0;display:flex;flex-direction:column;gap:26px;align-items:flex-start}
+.why__copy .h2{font-size:40px}
+.why__copy>p{font-size:17px;line-height:1.6;color:var(--body)}
+.points{display:flex;flex-direction:column;gap:16px;width:100%}
+.point{display:flex;align-items:center;gap:14px;font-size:16px;font-weight:500;color:var(--slate-ink)}
+.point svg{width:22px;height:22px;color:var(--teal)}
+
+/* ===== DOCTOR BIO ===== */
+.bio{background:radial-gradient(ellipse 60% 70% at 50% 50%, #33454F 0%, #1B262E 100%);display:flex;align-items:center;gap:96px}
+.bio__img{width:540px;height:clamp(500px,75.6vh,680px);flex:none;border-radius:18px;overflow:hidden}
+.bio__copy{flex:1;min-width:0;display:flex;flex-direction:column;gap:28px}
+.bio__copy>p{font-size:16px;line-height:1.6;color:var(--mist)}
+.quote{padding:28px 0;border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15);display:flex;flex-direction:column;gap:14px}
+.quote svg{width:28px;height:28px;color:var(--gold)}
+.quote p{font-size:21px;font-weight:500;line-height:1.5;color:#fff}
+.figures{display:flex;gap:24px}
+.figure{flex:1;display:flex;flex-direction:column;gap:6px}
+.figure b{font-size:40px;font-weight:600;color:var(--gold);line-height:1.22}
+.figure span{font-size:14px;line-height:1.5;color:var(--mist)}
+
+/* ===== WHAT TO EXPECT ===== */
+.expect{background:var(--wash);display:flex;flex-direction:column;gap:48px}
+.phases{display:flex;flex-direction:column;gap:12px}
+.phase{background:#fff;border-radius:14px;padding:32px 40px;display:flex;align-items:center;gap:40px}
+.phase__title{width:320px;flex:none;display:flex;align-items:center;gap:18px}
+.phase__title .icon-circle{width:72px;height:72px;background:var(--wash)}
+.phase__title .icon-circle img{width:52px;height:52px}
+.phase__title h3{font-size:24px;font-weight:600;color:var(--slate-ink)}
+.phase>p{flex:1;min-width:0;font-size:16px;line-height:1.6;color:var(--body)}
+.phase__fig{width:200px;flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:4px;text-align:right}
+.phase__fig b{font-size:32px;font-weight:600;color:var(--teal-text);line-height:1.22}
+.phase__fig span{font-size:14px;color:var(--muted)}
+
+/* ===== COMPARISON ===== */
+.compare{display:flex;flex-direction:column;gap:64px}
+.compare .sec-head{width:720px}
+.table-wrap{width:100%}
+.ctable{display:flex;align-items:center;width:100%}
+.ccol{display:flex;flex-direction:column;flex:1;min-width:0}
+.ccol--labels{width:232px;flex:none}
+.ccol--em{border-radius:14px;padding:24px 0;background:linear-gradient(145deg, #22303A 13%, #577C7C 87%)}
+.chead{height:88px;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:0 24px}
+.ccol--labels .chead{padding:0}
+.chead small{font-size:12px;font-weight:500;color:var(--teal-pale)}
+.chead strong{font-size:20px;font-weight:600;color:var(--slate-ink)}
+.ccol--em .chead strong{color:#fff}
+.cell{height:96px;display:flex;align-items:center;gap:10px;padding:0 24px;border-bottom:1px solid var(--rule);font-size:15px;line-height:1.5;color:var(--body)}
+.ccol--labels .cell{padding:0 16px 0 0;font-weight:600;line-height:1.4;color:var(--slate-ink)}
+.ccol--em .cell{border-bottom-color:rgba(255,255,255,.15);color:#fff;font-weight:500}
+.cell svg{width:18px;height:18px;color:var(--teal-pale)}
+
+/* ===== REVIEWS ===== */
+.reviews{background:radial-gradient(ellipse 65% 55% at 50% 35%, #33454F 0%, #1B262E 100%);display:flex;flex-direction:column;gap:56px}
+.rev-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
+.badge{display:flex;align-items:center;gap:16px;padding:16px 24px;border-radius:100px;background:rgba(255,255,255,.08)}
+.badge b{font-size:28px;font-weight:600;color:#fff}
+.badge__stack{display:flex;flex-direction:column;gap:4px}
+.badge .stars svg{width:16px;height:16px}
+.badge__stack span{font-size:13px;color:var(--mist)}
+.vids{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.vid{position:relative;height:clamp(420px,61.3vh,551px);border-radius:16px;overflow:hidden;isolation:isolate;background:var(--slate-deep);cursor:pointer}
+.vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.vid__ui{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:0 24px 28px;transition:opacity .3s ease}
+.vid__ui::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg, rgba(34,48,58,0) 55%, rgba(34,48,58,.90) 100%)}
+.vid__spacer{height:72px}
+.play{width:72px;height:72px;border-radius:100px;background:#fff;box-shadow:0 0 0 10px rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:var(--teal)}
+.play svg{width:26px;height:26px;margin-left:3px}
+.vid__cap{width:100%;font-size:16px;font-weight:600;line-height:1.4;color:#fff}
+.vid.is-playing .vid__ui{opacity:0}
+@media (hover:hover) and (pointer:fine){.vid.is-playing:hover .vid__ui{opacity:1}}
+.vid.is-playing .vid__ui::before{opacity:0}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.qcard{background:rgba(255,255,255,.06);border-radius:8px;padding:36px;display:flex;flex-direction:column;gap:20px}
+.qcard .stars svg{width:15px;height:15px}
+.qcard p{font-size:17px;line-height:1.6;color:#fff}
+.qcard__by{display:flex;align-items:center;gap:8px;margin-top:auto}
+.qcard__by b{font-size:15px;font-weight:600;color:#fff}
+.qcard__by span{font-size:14px;color:var(--teal-pale)}
+
+/* ===== QUIZ ===== */
+.quiz{padding:clamp(80px,12.5vh,112px) var(--pad-x) clamp(52px,8vh,72px);display:flex;flex-direction:column;gap:40px}
+.quiz__head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
+.quiz__title{display:flex;flex-direction:column;gap:14px}
+.quiz__title .h2 span{display:inline;margin-left:.2em}
+.quiz__title p{font-size:16px;line-height:1.6;color:var(--body)}
+.progress{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex:none}
+.progress span{font-size:13px;font-weight:500;color:var(--slate)}
+.progress__bar{width:220px;height:6px;border-radius:100px;background:var(--wash);overflow:hidden}
+.progress__fill{height:100%;width:100%;border-radius:100px;background:var(--teal);transform-origin:left center;transform:scaleX(0)}
+.qrows{display:flex;flex-direction:column;gap:12px}
+.qrow{border-radius:14px;background:var(--card);padding:16px 16px 16px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;transition:background-color .2s ease}
+.qrow.is-answered{background:var(--wash)}
+.qrow__q{display:flex;align-items:center;gap:16px;font-size:18px;font-weight:500;color:var(--slate-deep)}
+.qrow__ico{position:relative;width:22px;height:22px;flex:none}
+.qrow__ico svg{position:absolute;inset:0;width:22px;height:22px}
+.qrow__ico .i-off{color:var(--teal-pale)}
+.qrow__ico .i-on{color:var(--teal);opacity:0;transform:scale(.6)}
+.qrow__ans{display:flex;gap:10px;flex:none}
+.tile{width:132px;height:56px;border-radius:6px;background:#fff;display:flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:600;color:var(--slate-ink);transition:background-color .2s ease,color .2s ease}
+.tile svg{width:16px;height:16px;display:none}
+@media (hover:hover) and (pointer:fine){.tile:hover{background:var(--card)}}
+.tile.is-on{background:var(--teal);color:#fff}
+.tile.is-on svg{display:block}
+.qrow.shake{box-shadow:inset 0 0 0 1px var(--teal-pale)}
+.quiz__foot{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.quiz__hint{font-size:14px;color:var(--body);opacity:0}
+.result{display:none;border-radius:14px;background:linear-gradient(125deg, #22303A 13%, #577C7C 87%);padding:48px;color:#fff;align-items:center;justify-content:space-between;gap:40px}
+.result.is-shown{display:flex}
+.result__main{display:flex;gap:24px;align-items:flex-start;max-width:720px}
+.result__ico{width:64px;height:64px;border-radius:100px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;flex:none;color:var(--teal-pale)}
+.result__ico svg{width:30px;height:30px}
+.result h3{font-size:36px;line-height:1.2;font-weight:400}
+.result h3 span{font-weight:600}
+.result p{margin-top:14px;font-size:17px;line-height:1.6;color:var(--mist)}
+.result__act{display:flex;flex-direction:column;align-items:center;gap:16px;flex:none}
+.result__retake{font-size:14px;font-weight:500;color:var(--teal-pale);text-decoration:underline;text-underline-offset:3px}
+
+/* ===== CONTACT ===== */
+.contact{background:var(--wash);padding:clamp(68px,10.7vh,96px) var(--pad-x) clamp(80px,12.5vh,112px);display:flex;gap:48px;align-items:stretch}
+.form-card{width:700px;flex:none;background:#fff;border-radius:14px;padding:48px;display:flex;flex-direction:column;gap:24px}
+.form-card .h2{font-size:40px}
+.form-card .h2 span{margin-top:4px}
+.form-intro{font-size:15px;line-height:1.6;color:var(--body)}
+.frow{display:flex;gap:16px}
+.field{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+.field label{font-size:13px;font-weight:500;color:var(--slate)}
+.field input,.field textarea{width:100%;height:52px;border-radius:6px;background:var(--wash);border:1px solid transparent;padding:0 16px;font-size:15px;color:var(--slate-ink);outline:none;transition:border-color .18s ease,background-color .18s ease}
+.field textarea{height:148px;padding:16px;line-height:1.6;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted);opacity:1}
+.field input:focus,.field textarea:focus{border-color:rgba(168,196,193,.75);background:#EDF2F1}
+.field input:focus-visible,.field textarea:focus-visible{outline:2px solid var(--teal);outline-offset:1px}
+.field.is-invalid input{border-color:var(--teal)}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:13px;line-height:1.5;color:var(--body);cursor:pointer}
+.consent input{position:absolute;opacity:0;width:1px;height:1px}
+.check{width:20px;height:20px;border-radius:4px;flex:none;background:var(--wash);border:1px solid var(--teal-pale);display:flex;align-items:center;justify-content:center;color:#fff;transition:background-color .15s ease,border-color .15s ease}
+.check svg{width:14px;height:14px;opacity:0}
+.consent input:checked+.check{background:var(--teal);border-color:var(--teal)}
+.consent input:checked+.check svg{opacity:1}
+.consent input:focus-visible+.check{outline:2px solid var(--teal);outline-offset:2px}
+.submit{width:100%;height:56px}
+.fine{font-size:12px;line-height:1.5;color:var(--muted)}
+.form-err{font-size:13px;color:var(--slate);display:none}
+.form-success{display:flex;flex-direction:column;gap:16px;padding:24px 0}
+.form-success .result__ico{background:var(--wash);color:var(--teal)}
+.form-success h3{font-size:32px;line-height:1.2;font-weight:400;color:var(--slate)}
+.form-success h3 span{font-weight:600}
+.form-success p{font-size:16px;line-height:1.6;color:var(--body)}
+.spin{display:inline-block;width:18px;height:18px;border:2px solid #fff;border-right-color:rgba(255,255,255,0);border-radius:50%}
+.info{flex:1;min-width:0;padding-top:48px;display:flex;flex-direction:column;gap:28px}
+.info__logo{width:129px;height:60px;object-fit:contain}
+.info__row{display:flex;gap:16px}
+.info__row .icon-circle{width:44px;height:44px;background:#fff;color:var(--gold)}
+.info__row .icon-circle svg{width:20px;height:20px}
+.info__txt{display:flex;flex-direction:column;gap:4px;font-size:15px;line-height:1.6;color:var(--body)}
+.info__txt b{font-weight:600;color:var(--slate-deep);line-height:1.22}
+.map{position:relative;flex:1;min-height:360px;border-radius:16px;overflow:hidden;background:#dfe7e5}
+.map iframe{width:100%;height:100%;border:0;filter:saturate(.6) contrast(1.02)}
+.map__chip{position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:100px;background:#fff;font-size:13px;font-weight:600;color:var(--teal-text);box-shadow:0 2px 10px rgba(34,48,58,.12)}
+.map__chip svg{width:14px;height:14px}
+
+/* ===== FAQ ===== */
+.faq{display:flex;flex-direction:column;align-items:center;gap:48px}
+.faq .h2{text-align:center;color:var(--slate-ink)}
+.acc{width:880px;max-width:100%;display:flex;flex-direction:column;gap:12px}
+.acc__item{border-radius:14px;background:var(--card);transition:background-color .2s ease}
+.acc__item.is-open{background:var(--wash)}
+.acc__btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 32px;transition:padding-bottom .35s cubic-bezier(.2,.7,.3,1);text-align:left;font-size:18px;font-weight:600;color:var(--slate-ink)}
+.acc__tog{position:relative;width:36px;height:36px;border-radius:100px;background:#fff;color:var(--teal);flex:none;display:flex;align-items:center;justify-content:center;transition:background-color .2s ease,color .2s ease}
+.acc__tog svg{width:18px;height:18px}
+.acc__tog .i-minus{display:none}
+.acc__item.is-open .acc__tog .i-minus{display:block}
+.acc__item.is-open .acc__tog .i-plus{display:none}
+.acc__item.is-open .acc__tog{background:var(--teal);color:#fff}
+.acc__panel{height:0;overflow:hidden}
+.acc__item.is-open .acc__panel{height:auto}
+.acc__item.is-open .acc__btn{padding-bottom:14px}
+.acc__panel p{padding:0 32px 24px;font-size:16px;line-height:1.6;color:var(--body)}
+
+/* ===== CTA BANNER ===== */
+.cta{background:linear-gradient(125deg, #22303A 13%, #577C7C 87%);padding:clamp(68px,10.7vh,96px) var(--pad-x);display:flex;align-items:center;justify-content:space-between;gap:64px;color:#fff}
+.cta__copy{display:flex;align-items:center;gap:28px}
+.cta__fig{font-size:120px;font-weight:600;letter-spacing:-3px;line-height:.9}
+.cta__words{display:flex;flex-direction:column;gap:10px}
+.cta__words strong{font-size:36px;line-height:1.15;font-weight:400}
+.cta__words strong span{display:block;font-weight:600}
+.cta__words small{font-size:15px;color:var(--mist)}
+.cta__act{display:flex;flex-direction:column;align-items:center;gap:18px}
+.cta__phone{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:500}
+.cta__phone svg{width:18px;height:18px;color:var(--teal-pale)}
+
+/* ===== FOOTER ===== */
+.foot{background:var(--night);padding:80px var(--pad-x) 40px;display:flex;flex-direction:column;gap:56px;color:#fff}
+.foot__top{display:flex;justify-content:space-between;gap:48px}
+.foot__logo{width:240px;height:112px;object-fit:contain;object-position:left center}
+.foot__cols{display:flex;gap:80px}
+.fcol{display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.6;color:var(--mist)}
+.fcol b{font-weight:600;color:#fff;line-height:1.22}
+@media (hover:hover) and (pointer:fine){.fcol a:hover{color:var(--teal-pale)}}
+.fcol a:active{color:var(--teal-pale)}
+.socials{display:flex;gap:12px}
+.socials a{width:44px;height:44px;border-radius:100px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff}
+.socials svg{width:18px;height:18px}
+.foot__bottom{padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:var(--teal-pale)}
+
+
+/* nav */
+.bar__nav{display:flex;align-items:center;gap:36px;margin:0 auto 0 56px}
+.bar__nav a{position:relative;font-size:14px;font-weight:500;color:#fff;padding:6px 0;transition:color .15s ease}
+.bar__nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right center;transition:transform .35s cubic-bezier(.65,0,.35,1)}
+.bar__nav a.is-active{color:var(--teal-pale)}
+.bar__nav a.is-active::after{transform:scaleX(1);transform-origin:left center}
+@media (hover:hover) and (pointer:fine){.bar__nav a:hover{color:var(--teal-pale)}.bar__nav a:hover::after{transform:scaleX(1);transform-origin:left center}}
+.bar__menu{display:none;width:44px;height:44px;border-radius:100px;background:rgba(255,255,255,.12);align-items:center;justify-content:center;color:#fff}
+.bar__menu svg{width:20px;height:20px}
+.bar__menu .i-x{display:none}
+.bar.menu-open .bar__menu .i-x{display:block}
+.bar.menu-open .bar__menu .i-menu{display:none}
+.mnav{position:fixed;left:0;right:0;top:0;z-index:49;background:rgba(27,38,46,.97);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding:112px var(--pad-x) 28px;display:none;flex-direction:column;gap:4px}
+.mnav a{font-size:22px;font-weight:500;color:#fff;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.mnav a.mnav__call{display:flex;align-items:center;gap:10px;font-size:16px;color:var(--teal-pale);border:0;padding-top:20px}
+.mnav a.mnav__call svg{width:18px;height:18px}
+
+/* glass offer */
+.offer{position:relative;overflow:hidden;isolation:isolate;background:rgba(255,255,255,.12)!important;-webkit-backdrop-filter:blur(22px) saturate(150%);backdrop-filter:blur(22px) saturate(150%);border:1px solid rgba(255,255,255,.26);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 24px 60px -30px rgba(27,38,46,.8);color:#fff!important;cursor:default;will-change:transform}
+.offer>*{position:relative;z-index:2}
+.offer .offer__top{color:var(--teal-pale)}
+.offer .offer__amt b{color:#C9A56A}
+.offer .offer__fine{color:var(--mist)}
+.offer__glow{position:absolute!important;inset:0;z-index:0!important;pointer-events:none;opacity:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,.22), rgba(255,255,255,0) 65%)}
+.offer__sheen{position:absolute!important;top:0;bottom:0;left:0;width:60%;z-index:1!important;pointer-events:none;background:linear-gradient(105deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.28) 50%, rgba(255,255,255,0) 100%);opacity:0}
+
+/* inline icons */
+.ico{width:48px;height:48px;display:block}
+.icon-circle{color:var(--teal-pale)}
+.phase__title .icon-circle{color:var(--gold)}
+.phase__title .icon-circle .ico{width:52px;height:52px}
+
+/* step hover */
+.step{position:relative}
+.step__bg{position:absolute;inset:-1px -18px -18px;border-radius:14px;background:rgba(255,255,255,.07);opacity:0;pointer-events:none;z-index:-1}
+.step__line{position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--teal-pale);transform:scaleX(0);transform-origin:left center}
+.steps{position:relative;z-index:0}
+
+/* phase hover */
+.phase{position:relative;will-change:transform}
+.phase__title .icon-circle{transition:background-color .3s ease,color .3s ease}
+.phase.is-hot .phase__title .icon-circle{background:var(--teal);color:#fff}
+
+/* table row hover */
+.ctable{position:relative}
+.ccol{position:relative;z-index:1}
+.row-band{position:absolute;left:0;right:0;top:0;height:96px;border-radius:10px;background:rgba(87,124,124,.08);opacity:0;pointer-events:none;z-index:0}
+.cell{transition:color .2s ease,background-color .2s ease}
+.cell.is-hot{color:var(--slate-ink)}
+.ccol--labels .cell.is-hot{color:var(--teal-text)}
+.ccol--em .cell.is-hot{background:rgba(255,255,255,.08);color:#fff}
+.ccol--labels .cell>span,.cell>span.v{display:inline-block}
+
+/* review cards */
+.qcard{position:relative;border:1px solid rgba(255,255,255,0);transition:border-color .3s ease,background-color .3s ease;will-change:transform}
+.qcard.is-hot{border-color:rgba(168,196,193,.35);background:rgba(255,255,255,.1)}
+@media (hover:hover) and (pointer:fine){.qcard:hover{border-color:rgba(168,196,193,.35);background:rgba(255,255,255,.1)}}
+.qcard .stars svg{transition:fill .25s ease}
+.qcard.is-hot .stars svg{fill:currentColor}
+@media (hover:hover) and (pointer:fine){.qcard:hover .stars svg{fill:currentColor}}
+
+/* footer logo glow */
+.foot__logo-wrap{display:inline-block;cursor:pointer}
+.foot__logo{will-change:filter,transform}
+
+
+/* section CTAs */
+.sec-cta{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.sec-cta .callstack small{color:var(--muted)}
+.sec-cta .callstack a{color:var(--slate-deep)}
+.sec-cta--dark .callstack small{color:var(--teal-pale)}
+.sec-cta--dark .callstack a{color:#fff}
+.sec-cta__link{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--teal-text);text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(63,107,102,.35);transition:color .15s ease,text-decoration-color .15s ease}
+.sec-cta__link svg{width:16px;height:16px;transition:transform .3s cubic-bezier(.2,.7,.3,1)}
+.sec-cta__link:hover{text-decoration-color:currentColor}
+.sec-cta__link:hover svg{transform:translateX(4px)}
+.sec-cta--dark .sec-cta__link{color:var(--teal-pale);text-decoration-color:rgba(168,196,193,.4)}
+.sec-cta--dark .sec-cta__link:hover{color:#fff;text-decoration-color:#fff}
+@media (max-width:767px){.sec-cta{flex-direction:column;align-items:flex-start;gap:18px}.sec-cta .btn{width:100%}}
+
+.reg{display:inline;font-size:.5em;vertical-align:super;line-height:0;margin-left:.04em;font-weight:inherit;letter-spacing:0}
+/* ===== RESPONSIVE ===== */
+@media (max-width:1179px){
+  .bar__nav{display:none}
+  .bar__menu{display:flex}
+  .bar.menu-open~.mnav{display:flex}
+}
+@media (max-width:1279px){
+  :root{--pad-x:40px;--sec-y:clamp(72px,11.1vh,100px)}
+  .hero__h1{font-size:60px}
+  .why{gap:56px}.why__img{width:46%;height:clamp(400px,57.8vh,520px)}
+  .bio{gap:56px}.bio__img{width:42%;height:clamp(480px,68.9vh,620px)}
+  .form-card{width:58%}
+  .proof{flex-wrap:wrap;justify-content:center;gap:18px clamp(20px,3.2vw,40px)}
+  .proof__rating{flex-basis:100%;justify-content:center}
+  .phase__title{width:260px}
+  .cta__fig{font-size:96px}
+}
+@media (max-width:1023px){
+  .proof__item{font-size:14px;gap:10px}
+  .proof__item svg{width:18px;height:18px}
+  :root{--pad-x:32px;--sec-y:clamp(64px,7.5vh,88px)}
+  .hero__bottom{flex-direction:column;align-items:flex-start;gap:32px}
+  .h2{font-size:38px}
+  .sym-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sym{height:clamp(300px,34vh,400px)}
+  .how__head,.rev-head,.quiz__head{flex-direction:column;align-items:flex-start}
+  .progress{align-items:flex-start}
+  .how__media{height:auto;min-height:clamp(520px,57.6vh,680px)}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+  .why,.bio{flex-direction:column;align-items:stretch}
+  .why__img,.bio__img{width:100%;height:clamp(360px,40.7vh,480px)}
+  .bio__img img{object-position:center 25%}
+  .phase{flex-wrap:wrap;gap:20px 32px}
+  .phase__title{width:100%}
+  .phase>p{flex:1 1 280px}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(var(--pad-x) * -1);padding:0 var(--pad-x) 8px}
+  .ctable{min-width:1040px}
+  .vids{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .quotes{grid-template-columns:1fr}
+  .contact{flex-direction:column;align-items:stretch}
+  .form-card{width:100%}
+  .info{padding-top:0}
+  .map{flex:none;height:clamp(280px,30.5vh,360px);min-height:0}
+  .cta{flex-direction:column;align-items:flex-start;gap:40px}
+  .cta__act{align-items:flex-start}
+  .foot__top{flex-direction:column}
+  .foot__cols{flex-wrap:wrap;gap:40px 64px}
+  .result{flex-direction:column;align-items:flex-start}
+  .result__act{align-items:flex-start}
+}
+@media (max-width:767px){
+  :root{--pad-x:20px;--sec-y:clamp(52px,10.9svh,72px)}
+  .bar{padding:16px var(--pad-x)}
+  .bar.is-solid{padding-top:10px;padding-bottom:10px}
+  .bar__logo img{width:110px;height:52px}
+  .bar.is-solid .bar__logo img{height:44px}
+  .bar__phone span{display:none}
+  .bar__phone{width:44px;height:44px;border-radius:100px;justify-content:center;background:rgba(255,255,255,.12)}
+  .bar__actions{gap:10px}
+  .mnav{padding-top:84px}
+  .btn--sm{padding:13px 18px;font-size:11px}
+  .hero__scrim{background:
+    linear-gradient(180deg, rgba(27,38,46,.75) 0%, rgba(27,38,46,0) 22%),
+    linear-gradient(0deg, rgba(34,48,58,.96) 0%, rgba(34,48,58,.75) 50%, rgba(34,48,58,.2) 80%)}
+  .proof{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px;padding:28px var(--pad-x)}
+  .proof__rating{grid-column:1 / -1;justify-content:center}
+  .proof__item{font-size:13px;white-space:normal;gap:10px}
+  .h2{font-size:30px}
+  .sec-head p{font-size:16px}
+  .symptoms,.how,.reviews{gap:36px}
+  .sym-grid{grid-template-columns:1fr;gap:16px}
+  .sym{height:clamp(280px,51.6svh,340px);padding:24px}
+  .how__media{min-height:0;padding-top:clamp(220px,45.5svh,300px)}
+  .how__media>img{height:clamp(270px,54.6svh,360px);top:0}
+  .how__media::after{background:linear-gradient(180deg, rgba(34,48,58,0) 18%, rgba(34,48,58,.92) 42%, rgba(34,48,58,.97) 100%)}
+  .steps{grid-template-columns:1fr;gap:24px;padding:0 24px 28px}
+  .why,.bio{gap:36px}
+  .why__img,.bio__img{height:auto;aspect-ratio:4/4.2}
+  .why__copy .h2,.form-card .h2{font-size:28px}
+  .why__copy .btn{width:100%}
+  .point{font-size:15px;align-items:flex-start}
+  .quote p{font-size:18px}
+  .figures{gap:16px}
+  .figure b{font-size:30px}
+  .figure span{font-size:12.5px}
+  .expect,.compare{gap:32px}
+  .phase{padding:24px;gap:16px}
+  .phase__title .icon-circle{width:60px;height:60px}
+  .phase__title .icon-circle img{width:44px;height:44px}
+  .phase__title h3{font-size:21px}
+  .phase>p{flex-basis:100%;font-size:15px}
+  .phase__fig{width:100%;align-items:flex-start;text-align:left;flex-direction:row;align-items:baseline;gap:10px}
+  .phase__fig b{font-size:26px}
+  .ctable{min-width:900px}
+  .ccol--labels{width:150px;position:sticky;left:0;z-index:2;background:#fff;box-shadow:8px 0 12px -10px rgba(34,48,58,.25)}
+  .ccol--labels .cell{font-size:13.5px;padding-right:12px}
+  .vids{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 calc(var(--pad-x) * -1);padding:0 var(--pad-x);scrollbar-width:none}
+  .vids::-webkit-scrollbar{display:none}
+  .vid{flex:0 0 78%;height:clamp(360px,69.8svh,460px);scroll-snap-align:center}
+  .qcard{padding:26px}
+  .qcard p{font-size:16px}
+  .badge{padding:12px 20px}
+  .quiz{padding:clamp(52px,10.9svh,72px) var(--pad-x) clamp(40px,8.5svh,56px);gap:28px}
+  .quiz__title .h2 span{display:block;margin-left:0}
+  .qrow{flex-direction:column;align-items:stretch;padding:18px;gap:14px}
+  .qrow__q{font-size:16px;align-items:flex-start}
+  .qrow__ans .tile{flex:1;width:auto;height:50px}
+  .quiz__foot .btn{width:100%}
+  .result{padding:28px 22px}
+  .result__main{flex-direction:column;gap:18px}
+  .result h3{font-size:28px}
+  .result__act,.result__act .btn{width:100%}
+  .contact{padding:clamp(48px,9.7svh,64px) var(--pad-x) clamp(52px,10.9svh,72px);gap:40px}
+  .form-card{padding:28px 20px;gap:20px}
+  .frow{flex-direction:column}
+  .acc__btn{padding:20px;font-size:16px}
+  .acc__panel p{padding:0 20px 20px;font-size:15px}
+  .acc__item.is-open .acc__btn{padding-bottom:12px}
+  .cta{padding:clamp(52px,10.9svh,72px) var(--pad-x)}
+  .cta__copy{flex-direction:column;align-items:flex-start;gap:16px}
+  .cta__fig{font-size:80px;letter-spacing:-2px}
+  .cta__words strong{font-size:28px}
+  .cta__act,.cta__act .btn{width:100%}
+  .cta__act{align-items:center}
+  .foot{padding:56px var(--pad-x) 32px;gap:40px}
+  .foot__logo{width:180px;height:84px}
+  .foot__cols{display:grid;grid-template-columns:1fr 1fr;gap:32px 24px}
+}
+/* ===== HERO: always exactly one screen tall (100svh), content scales with screen height ===== */
+@media (min-width:1024px) and (max-height:600px){
+  .hero{padding-bottom:clamp(24px,6svh,64px)}
+  .hero__copy{gap:clamp(12px,3svh,28px)}
+  .hero__h1{font-size:clamp(40px,10svh,60px)}
+  .offer{padding:clamp(18px,4svh,32px);gap:clamp(8px,1.8svh,14px)}
+  .offer__amt b{font-size:clamp(44px,9svh,64px)}
+}
+@media (max-width:1023px){
+  .hero{padding-top:clamp(92px,12svh,140px);padding-bottom:clamp(20px,4.5svh,64px)}
+  .hero__bottom{gap:clamp(14px,2.8svh,32px)}
+  .hero__copy{gap:clamp(10px,2.4svh,28px)}
+  .hero__h1{font-size:clamp(30px,5.1svh,60px)}
+  .hero__cta{padding-top:0}
+  /* compact offer card: amount on the left, copy on the right */
+  .offer{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:20px;row-gap:8px;align-items:center;width:min(100%,560px)}
+  .offer__top{grid-column:1 / -1}
+  .offer__amt{grid-row:2 / span 2;align-self:center}
+  .offer__body,.offer__fine{grid-column:2}
+}
+@media (max-width:767px){
+  .hero{padding-top:92px;padding-bottom:clamp(16px,3.6svh,36px)}
+  .hero__bottom{gap:clamp(12px,2.4svh,24px)}
+  .hero__copy{gap:clamp(8px,2svh,20px)}
+  .hero__eyebrow{font-size:12.5px}
+  .hero__h1{font-size:clamp(28px,min(10vw,5.6svh),42px);letter-spacing:-.3px}
+  .hero__sub{font-size:clamp(13.5px,2.35svh,16px);line-height:1.5}
+  .hero__cta{flex-direction:column;align-items:stretch;gap:clamp(8px,1.8svh,18px);width:100%}
+  .hero__cta .btn{width:100%;padding:clamp(15px,2.6svh,20px) 24px}
+  .callstack{flex-direction:row;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:2px 8px}
+  .callstack a{font-size:16px}
+  .offer{width:100%;padding:clamp(14px,2.6svh,22px) clamp(16px,4.5vw,22px);column-gap:16px;row-gap:clamp(4px,1svh,8px);border-radius:12px}
+  .offer__top{font-size:12.5px}
+  .offer__amt{gap:6px}
+  .offer__amt b{font-size:clamp(38px,6.4svh,52px)}
+  .offer__amt span{font-size:20px}
+  .offer__body{font-size:14px;line-height:1.4}
+  .offer__fine{font-size:11.5px;line-height:1.4}
+}
+/* narrow phones: keep the logo readable in the header */
+@media (max-width:767px){
+  .bar__logo{flex:none}
+}
+@media (max-width:480px){
+  .bar__logo img,.bar.is-solid .bar__logo img{width:100px;height:46px}
+  .bar__phone{display:none}
+  .bar__actions .btn--sm{font-size:0;gap:0}
+  .bar__actions .btn--sm::after{content:"Book consultation";font-size:11px}
+  .bar__actions .btn--sm{padding:13px 16px}
+}
+@media (max-width:380px){
+  .bar__logo img,.bar.is-solid .bar__logo img{width:86px;height:42px}
+  .bar__actions .btn--sm{padding:12px 13px}
+}
+@media (max-width:767px) and (max-height:600px){
+  .offer__fine{display:none}
+}
+/* phones and small tablets in landscape: copy and offer side by side so everything fits one screen */
+@media (max-width:1023px) and (max-height:540px) and (orientation:landscape){
+  .bar,.bar.is-solid{padding:8px var(--pad-x)}
+  .bar__logo img,.bar.is-solid .bar__logo img{width:96px;height:44px}
+  .mnav{padding-top:72px}
+  .hero{padding-top:68px;padding-bottom:clamp(12px,4svh,24px)}
+  .hero__bottom{flex-direction:row;align-items:flex-end;gap:24px}
+  .hero__copy{flex:1;min-width:0;gap:clamp(6px,2svh,12px)}
+  .hero__eyebrow{font-size:12px}
+  .hero__h1{font-size:clamp(22px,7.6svh,36px)}
+  .hero__sub{font-size:13px;line-height:1.45}
+  .hero__cta{flex-direction:row;align-items:center;gap:16px;width:auto}
+  .hero__cta .btn{width:auto;padding:12px 22px}
+  .callstack{flex-direction:column;gap:0}
+  .callstack a{font-size:15px}
+  .offer{display:flex;flex-direction:column;align-items:stretch;width:clamp(210px,30vw,300px);padding:14px 16px;gap:4px}
+  .offer__amt{align-self:flex-start}
+  .offer__amt b{font-size:clamp(30px,10svh,44px)}
+  .offer__amt span{font-size:18px}
+  .offer__body{font-size:13px}
+  .offer__fine{display:none}
+}
+/* ===== AWARD BADGE + EXAM PRICE ===== */
+.hero__award{display:flex;align-items:center;gap:16px}
+.hero__badge{width:88px;height:88px;flex:none;border-radius:50%;box-shadow:0 10px 28px -12px rgba(0,0,0,.55)}
+.hero__award-txt{display:flex;flex-direction:column;gap:4px}
+.hero__honor{font-size:15px;line-height:1.4;font-weight:500;color:#fff}
+.offer__exam{display:flex;align-items:baseline;gap:8px;font-size:15px;font-weight:500;line-height:1.4}
+.offer__exam s{color:var(--mist);font-weight:400}
+.offer__exam b{font-size:18px;font-weight:600;color:#C9A56A}
+.foot__brand{display:flex;flex-direction:column;gap:28px}
+.foot__award{display:flex;align-items:center;gap:16px;max-width:320px}
+.foot__badge{width:84px;height:84px;flex:none;border-radius:50%}
+.foot__award p{font-size:13px;line-height:1.5;color:var(--mist)}
+.foot__award b{color:#fff;font-weight:600}
+@media (min-width:1024px) and (max-height:600px){
+  .hero__badge{width:clamp(56px,12svh,88px);height:clamp(56px,12svh,88px)}
+}
+@media (max-width:1023px){
+  .offer__exam{grid-column:2}
+}
+@media (max-width:767px){
+  .hero__award{gap:12px}
+  .hero__badge{width:clamp(52px,8svh,68px);height:clamp(52px,8svh,68px)}
+  .hero__honor{font-size:13.5px}
+  .offer__exam{font-size:13px;gap:6px}
+  .offer__exam b{font-size:15px}
+}
+@media (max-width:1023px) and (max-height:540px) and (orientation:landscape){
+  .hero__badge{width:44px;height:44px}
+  .hero__award{gap:10px}
+  .hero__award-txt{gap:2px}
+  .hero__honor{font-size:12px}
+  .offer__exam{font-size:12.5px}
+  .offer__exam b{font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:1ms!important;animation-duration:1ms!important}
+}
+</style>
+</head>
+<body>
+
+<header class="bar" data-bar>
+  <a class="bar__logo" href="#top" data-scroll aria-label="Smile Brookline home"><img src="images/logo-white.png" alt="Smile Brookline" width="150" height="70"></a>
+  <nav class="bar__nav" aria-label="Page sections">
+    <a href="#symptoms" data-scroll>Symptoms</a>
+    <a href="#results" data-scroll>Results</a>
+    <a href="#quiz" data-scroll>Are you a candidate?</a>
+  </nav>
+  <div class="bar__actions">
+    <a class="bar__phone" href="tel:+18577074435" aria-label="Call (857) 707-4435"><i data-lucide="phone"></i><span>(857) 707-4435</span></a>
+    <a class="btn btn--white btn--sm" href="#contact" data-scroll>Book my consultation</a>
+    <button class="bar__menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav" data-menu><i class="i-menu" data-lucide="menu"></i><i class="i-x" data-lucide="x"></i></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Page sections" data-mnav>
+  <a href="#symptoms" data-scroll>Symptoms</a>
+  <a href="#results" data-scroll>Results</a>
+  <a href="#quiz" data-scroll>Are you a candidate?</a>
+  <a class="mnav__call" href="tel:+18577074435"><i data-lucide="phone"></i>(857) 707-4435</a>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="EMFACE® for TMJ">
+    <div class="hero__media" data-intro="media">
+      <video autoplay muted loop playsinline preload="auto" poster="images/Smile-Brookline-Emface-1.91x1-web.jpg" aria-hidden="true">
+        <source src="images/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__scrim" data-intro="veil"></div>
+    <div class="hero__bottom">
+      <div class="hero__copy">
+        <div class="hero__award" data-intro="item">
+          <img class="hero__badge" src="images/top-dentist-boston-2026-badge-web.png" alt="Boston Magazine 2026 Top Dentists" width="360" height="360">
+          <div class="hero__award-txt">
+            <p class="hero__eyebrow">EMFACE<sup class="reg">®</sup> for TMJ at Smile Brookline</p>
+            <p class="hero__honor">Our doctors are Boston Magazine 2026 Top Dentists</p>
+          </div>
+        </div>
+        <h1 class="hero__h1" data-intro="title"><span>Jaw pain relief</span><span>without needles</span></h1>
+        <p class="hero__sub" data-intro="item">FDA-cleared EMFACE<sup class="reg">®</sup> retrains the jaw muscles behind TMJ pain. 20-minute sessions and no downtime, with Dr. Sara Stock in Brookline.</p>
+        <div class="hero__cta" data-intro="item">
+          <a class="btn btn--white btn--lg" href="#contact" data-scroll>Book my consultation <i data-lucide="arrow-right"></i></a>
+          <div class="callstack"><small>Or call the office</small><a href="tel:+18577074435">(857) 707-4435</a></div>
+        </div>
+      </div>
+      <aside class="offer" data-intro="tile" data-offer><span class="offer__glow" aria-hidden="true"></span><span class="offer__sheen" aria-hidden="true"></span>
+        <div class="offer__top"><i data-lucide="gift"></i>New patient offer</div>
+        <div class="offer__amt"><b>$250</b><span>off</span></div>
+        <p class="offer__body">Your first EMFACE<sup class="reg">®</sup> treatment or a treatment package.</p>
+        <p class="offer__exam">TMJ exam <s>$300</s> <b>$195</b></p>
+        <p class="offer__fine">New patients only. Cannot be combined with other offers.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- PROOF BAR -->
+  <section class="proof" aria-label="Highlights" data-sb-reveal="stack">
+    <div class="proof__item proof__rating">
+      <div class="stars" aria-hidden="true"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+      4.9 from 331 Google reviews
+    </div>
+    <div class="proof__item"><i data-lucide="shield-check"></i>FDA-cleared for TMJ</div>
+    <div class="proof__item"><i data-lucide="timer"></i>20-minute sessions</div>
+    <div class="proof__item"><i data-lucide="ban"></i>No needles</div>
+    <div class="proof__item"><i data-lucide="sun"></i>No downtime</div>
+  </section>
+
+  <!-- SOUND FAMILIAR -->
+  <section class="section symptoms" id="symptoms">
+    <div class="sec-head">
+      <h2 class="h2">Sound familiar?<span>TMJ takes over your day.</span></h2>
+      <p data-sb-reveal>Tight jaw muscles pull on your head, neck and face, and night guards or painkillers only manage the symptoms.</p>
+    </div>
+    <div class="sym-grid" data-sb-reveal="stack">
+      <article class="sym" data-hover-card><img class="sym__img" src="images/generated/symptom-jaw-pain.jpg" alt="" loading="lazy"><h3>Jaw pain or tightness</h3><p>A dull ache that builds through the day.</p></article>
+      <article class="sym" data-hover-card><img class="sym__img" src="images/generated/symptom-clicking.jpg" alt="" loading="lazy"><h3>Clicking or popping</h3><p>A pop or click every time you open your mouth.</p></article>
+      <article class="sym" data-hover-card><img class="sym__img" src="images/generated/symptom-headache.jpg" alt="" loading="lazy"><h3>Headaches or migraines</h3><p>Tension that starts at the jaw and climbs to your temples.</p></article>
+      <article class="sym" data-hover-card><img class="sym__img" src="images/generated/symptom-neck-pain.jpg" alt="" loading="lazy"><h3>Neck and facial soreness</h3><p>Tight muscles that pull on your neck and cheeks.</p></article>
+      <article class="sym" data-hover-card><img class="sym__img" src="images/generated/symptom-chewing.jpg" alt="" loading="lazy"><h3>Trouble chewing</h3><p>Difficulty biting down or fully opening your mouth.</p></article>
+      <article class="sym" data-hover-card><img class="sym__img" src="images/generated/symptom-clenching.jpg" alt="" loading="lazy"><h3>Clenching or grinding</h3><p>Often at night, so you wake up sore and tired.</p></article>
+    </div>
+    <div class="sec-cta" data-sb-reveal="stack">
+      <a class="btn btn--teal btn--lg" href="#contact" data-scroll>Book my consultation <i data-lucide="arrow-right"></i></a>
+      <a class="sec-cta__link" href="#quiz" data-scroll>Not sure? Take the 30-second quiz <i data-lucide="arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section how">
+    <div class="how__head">
+      <h2 class="h2 h2--light">Retrain the muscles<span>behind your TMJ pain</span></h2>
+      <p data-sb-reveal>EMFACE<sup class="reg">®</sup> combines synchronized radiofrequency and HIFES to relax and rebalance the masseter and temporalis, not just mask the pain.</p>
+    </div>
+    <div class="how__media" data-sb-reveal="media">
+      <img src="images/drive-client-uploads_FN2A0257-web.jpg" alt="Dr. Stock setting up an EMFACE® treatment" loading="lazy" data-parallax-img>
+      <div class="steps" data-sb-reveal="stack">
+        <div class="step" data-step><span class="step__bg" aria-hidden="true"></span><span class="step__line" aria-hidden="true"></span><div class="icon-circle"><svg class="ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" aria-hidden="true"><path d="m54.73 4.13c2.75 4.24 4.12 9.9 4.35 12.86 0.06 0.74-0.16 1.48-0.57 2.11-0.63 0.96-0.97 1.89-0.93 2.9 0.06 2.77 4.17 7.39 6.77 10.42 0.98 1.19 0.47 3.02-1.94 3.76-1.74 0.51-2.96 0.99-2.96 2.06 0 0.84 0.68 1.65 1.33 2.22 0.88 0.79 0.56 2.03-0.67 2.44l-3.18 1.17c2.45-0.52 3.76 0.54 3.76 1.91 0 0.91-0.7 1.31-1.46 1.53-1.37 0.4-1.51 1.71-1.01 3 1.59 4.01-0.54 6.77-4.37 6.77-2.12 0-6.36-0.85-8.15-1.3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="m16.96 63.13c3.41-2.74 6.26-10.4 6.25-15.89 0-2.86-0.36-5.53-1.04-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="m35.22 29.09c-3.36-0.4-5.45-1-6.99-4.11-1.24-2.58-3.41-4.16-6.14-4.16-4.17 0-7.06 3.36-7.06 7.79 0 4.53 1.95 7.53 5.23 10.16 1.61 1.3 3.26 2.7 4.98 2.68 1.97-0.03 3.48-1.65 3.74-4.7 0.16-1.91 0.28-3.41 1.1-3.79" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="m20.04 34.84c-1.45-1.35-2.11-3.61-2.11-5.88 0-3.52 1.94-5.1 3.92-5.1 1.97 0 3.58 1.52 3.58 3.32 0 1.31-0.86 2.31-1.84 3.01-0.7 0.51-0.95 1.19-0.95 1.88 0 0.82 0.57 1.5 1.44 1.87 1.24 0.54 1.85 1.56 1.85 2.53" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="32.93" cy="32.33" r="1.817" stroke="currentColor" stroke-width="2"/><path d="m35.76 33.46c1.09 0.75 1.71 2.14 2.08 4.18 0.4 2.27 1.83 3.86 4.02 4.75l3.46 1.3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="m32.72 35.13c0 1.35 1.8 4.25 1.77 8.38 0 0.44 0.02 0.82-0.03 1.16" stroke="currentColor" stroke-width="2"/><circle cx="37.65" cy="52.75" r="7.515" stroke="currentColor" stroke-width="2"/><path d="m34.25 47.21c-0.1 0.68-0.19 1.48-0.19 2.41 0 3 2.25 4.49 8.8 5.81" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="m28.69 59.64-5.07 5.49c-0.6 0.62-0.49 1.61 0.19 2.16 0.64 0.51 1.55 0.39 2.11-0.22l4.85-5.34c0.61-0.6 0.5-1.64-0.18-2.19-0.6-0.49-1.41-0.4-1.9 0.1z" stroke="currentColor" stroke-width="2"/><path d="m30.12 59.3c0.58 0.28 0.81 0.37 1.13 0.17 0.33-0.21 0.61-0.54 0.85-0.94" stroke="currentColor" stroke-width="2"/></svg></div><h3>Jaw assessment</h3><p>A TMJ exam with Dr. Stock to assess your jaw, bite and muscles. Now $195, regularly $300.</p></div>
+        <div class="step" data-step><span class="step__bg" aria-hidden="true"></span><span class="step__line" aria-hidden="true"></span><div class="icon-circle"><svg class="ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" aria-hidden="true"><path d="m47.23 11.99c1.32 2.52 3.45 7.14 3.47 10.05 0.01 1.53-0.34 2.85-0.34 4.03 0 2.75 4.06 7.17 6.39 9.41 1.33 1.37 0.53 2.88-1.34 3.68-2.08 0.91-1.47 2.57-0.37 3.74 1.03 1.27-0.36 2.57-1.65 3.07 1.08 0.22 1.74 0.72 1.74 1.65 0 0.92-0.66 1.49-1.28 1.85-0.63 0.38-0.73 1.03-0.52 1.69 0.5 1.56 0.99 2.83 0.86 4.08-0.2 2.23-2.3 2.97-5.1 2.97-1.63 0-3-0.09-4.34-0.02-4.95 0.28-5.73 4.92-6.7 9.86" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /><path d="m36.37 49.21-8.34 12.18c-0.54 0.8-0.31 1.89 0.52 2.42 0.81 0.52 1.88 0.29 2.44-0.48l8.89-11.51" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /><path d="m41.73 41.63 4.37 3c1.75 1.22 1.99 2.96 1.18 5.26l-0.45 1.17c-1.08 2.52-3.28 3.03-5.58 1.51l-4.59-3.2c-1.49-1.11-1.81-2.99-1.17-4.98l0.46-1.28c0.96-2.57 3.31-2.98 5.78-1.48z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /><path d="m30.72 49.03c-1.14-1.26-1.85-3.34-1.71-5.59 0.18-3.12 2.08-5.75 3.98-6.47" stroke="currentColor" stroke-linecap="round" stroke-width="2" /><path d="m28.28 50.95c-1.71-1.77-2.72-4.64-2.59-7.59 0.17-4.27 2.64-7.7 5.02-8.68" stroke="currentColor" stroke-linecap="round" stroke-width="2" /><path d="m33.18 47.62c-0.83-0.96-1.35-2.34-1.24-3.84 0.16-2.34 1.74-4.2 3.21-4.61" stroke="currentColor" stroke-linecap="round" stroke-width="2" /></svg></div><h3>Warmth and rhythm</h3><p>RF gently warms the tissue while HIFES delivers rhythmic contractions.</p></div>
+        <div class="step" data-step><span class="step__bg" aria-hidden="true"></span><span class="step__line" aria-hidden="true"></span><div class="icon-circle"><svg class="ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" aria-hidden="true"><path d="m53.82 17.07c1.41 3.13 2.79 7.05 3.16 10.41 0.05 0.51 0.26 0.99 0.6 1.38 1.23 1.44 2.73 3.01 3.96 4.43 1.09 1.49 0.48 3.77-2.03 4.18-1.43 0.24-1.37 1.69-0.39 2.81 0.93 1.28 0.53 2.64-1.89 3.52-0.05 0.02-0.04 0.1 0.02 0.1 2.45 0.04 2.72 1.72 1.19 2.8-1 0.71-0.78 1.74-0.1 2.66 1.97 2.86 0.82 8.25-5.14 8.66-3.88 0.29-7.27-0.59-10.42-1.97-1.45-0.63-3-1.03-4.48-1.27-2.68-0.45-4.55-2.45-5.14-5.29-0.63-2.98-1.08-6.33-1.94-8.96-0.37-1.17-1.12-2.16-2.11-2.87l-2.52-1.79" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /><path d="m44.48 52.13c-0.81-4.91-3.37-9.62-5.87-12.98-1.05-1.46-1.41-3.12-1.42-4.93-0.02-1.46-0.47-2.47-1.97-2.59-1.08-0.06-2.07 0.86-2.84 1.88-1.16 1.47-2.67 2.52-4.34 2.37-2-0.19-3.02-2.28-2.99-3.78 0.03-1.35 1.03-2.37 2.32-2.36 1.04 0.02 1.94 0.7 2.31 1.63 0.12 0.28 0.43 0.41 0.73 0.37 1.79-0.35 2.51-2.58 1.76-4.01-1-1.51-2.89-2.46-4.99-2.45-3.62 0.04-6.34 2.83-6.34 6.34 0 3.75 2.67 5.82 5.63 7.51v-3.71" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /><path d="m41.93 38.15c4.7 4.52 7.42 10.21 7.39 16.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /><path d="m39.76 38.14c4.37 4.44 6.94 10.05 7.19 14.99" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /><path d="m28.88 48.99c0.23 1.57-0.16 3.18-1.19 4.58-2.18 2.81-6.25 3.18-9 0.99-0.42-0.33-0.72-0.64-1.04-1.12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /><path d="m16.61 50.91c-0.23-1.65 0.16-3.38 1.33-4.87 2.17-2.74 6.2-2.89 8.77-0.89 0.48 0.37 0.81 0.7 1.17 1.2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /><path d="m17.45 55.17 0.03-1.94 1.84 0.06" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /><path d="m28.06 44.61-0.03 1.97-1.84-0.05" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg></div><h3>Muscles retrained</h3><p>A series of 20-minute sessions rebalances muscle activity over time.</p></div>
+        <div class="step" data-step><span class="step__bg" aria-hidden="true"></span><span class="step__line" aria-hidden="true"></span><div class="icon-circle"><svg class="ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" aria-hidden="true"><path d="m41.6 14.63c6.57 0.58 11.75 5.53 13.39 15.33 0.25 1.54 0.97 2.6 6.31 7.21 0.96 1 0.26 2.51-1.92 3.76-1.05 0.59-0.92 1.68-0.06 2.83 0.72 0.99 0.32 2.62-1.94 3.22-1.94 0.43-4.05-0.18-4.89-0.92" stroke="currentColor" stroke-linecap="round" stroke-width="2" /><path d="m58.15 46.96c1.41 0.66 1.6 2.05 0.25 3.26-0.51 0.47-0.55 1.15-0.26 1.94 1.16 3.28-0.21 5.58-4.17 5.37-3.54-0.27-6.67-0.79-7.87 1.87l-4.15 8.29" stroke="currentColor" stroke-linecap="round" stroke-width="2" /><path d="m45.17 33.08c2.91 1.39 6.03-0.13 6.67-2.01" stroke="currentColor" stroke-linecap="round" stroke-width="2" /><path d="m18.88 61.58v-27.06c0-0.21 0.2-0.34 0.39-0.27l9.83 3.78c0.13 0.05 0.19 0.16 0.19 0.3v19.31c0 0.13-0.07 0.25-0.19 0.3l-9.82 3.91c-0.19 0.07-0.4-0.06-0.4-0.27z" stroke="currentColor" stroke-width="2" /><path d="m31.89 48.25h7.44" stroke="currentColor" stroke-linecap="round" stroke-width="2" /><path d="m35 44.16 4.3 4.06c0.07 0.06 0.07 0.15 0 0.21l-4.3 4" stroke="currentColor" stroke-linecap="round" stroke-width="2" /></svg></div><h3>Back to your day</h3><p>Walk out and carry on. No needles, no numbing, no downtime.</p></div>
+      </div>
+    </div>
+    <div class="sec-cta sec-cta--dark" data-sb-reveal="stack">
+      <a class="btn btn--white btn--lg" href="#contact" data-scroll>Book my consultation <i data-lucide="arrow-right"></i></a>
+      <div class="callstack"><small>Or call the office</small><a href="tel:+18577074435">(857) 707-4435</a></div>
+    </div>
+  </section>
+
+  <!-- WHY A DENTIST -->
+  <section class="section why">
+    <div class="why__img" data-sb-reveal="media"><img src="images/team1.jpg" alt="The Smile Brookline team" loading="lazy"></div>
+    <div class="why__copy" data-sb-reveal="stack">
+      <h2 class="h2">A med spa treats the muscle.<span>A dentist treats the whole system.</span></h2>
+      <p>TMJ is a jaw joint and bite problem, so it belongs with a dentist who understands how teeth, bite, jaw joint, airway and muscles work together.</p>
+      <div class="points">
+        <div class="point"><i data-lucide="search"></i><span>Looks for the root cause: clenching, bite, airway and sleep issues</span></div>
+        <div class="point"><i data-lucide="layers"></i><span>Can combine EMFACE<sup class="reg">®</sup> with oral appliances or night guard therapy</span></div>
+        <div class="point"><i data-lucide="activity"></i><span>Monitors your bite and teeth over time</span></div>
+      </div>
+      <a class="btn btn--teal btn--md" href="#contact" data-scroll>Book my consultation</a>
+    </div>
+  </section>
+
+  <!-- DOCTOR BIO -->
+  <section class="section bio">
+    <div class="bio__img" data-sb-reveal="media"><img src="images/drive-client-uploads_FN2A0284-web.jpg" alt="Dr. Sara Stock with an EMFACE® patient" loading="lazy"></div>
+    <div class="bio__copy">
+      <h2 class="h2 h2--light">Meet Dr. Sara Stock,<span>your TMJ dentist</span></h2>
+      <p data-sb-reveal>Dr. Stock has practiced dentistry since 1989 and founded Smile Brookline in 1992. She was named one of America's Top Dentists from 2008 to 2018 and focuses on TMJ, jaw pain and airway-centered care, using a holistic, whole-body approach.</p>
+      <blockquote class="quote" data-sb-reveal><i data-lucide="quote"></i><p>We don't want just to fix the problem you have. We want to figure out what caused it so we can prevent future problems from occurring.</p></blockquote>
+      <div class="figures" data-sb-reveal="stack" data-stats>
+        <div class="figure"><b data-count="35" data-suffix="+">35+</b><span>years practicing dentistry</span></div>
+        <div class="figure"><b>1992</b><span>the year she founded Smile Brookline</span></div>
+        <div class="figure"><b data-count="4.9">4.9</b><span>stars from 331 Google reviews</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="section compare">
+    <div class="sec-head">
+      <h2 class="h2">How EMFACE<sup class="reg">®</sup> compares<span>to other TMJ options</span></h2>
+      <p data-sb-reveal>Every option has a place. EMFACE<sup class="reg">®</sup> is the one built to retrain the muscles, without needles.</p>
+    </div>
+    <div class="table-wrap" data-sb-reveal>
+      <div class="ctable" role="table" aria-label="EMFACE® compared with other TMJ options" data-ctable><span class="row-band" aria-hidden="true" data-band></span>
+        <div class="ccol ccol--labels" role="rowgroup">
+          <div class="chead"></div>
+          <div class="cell">How it works</div><div class="cell">Needles</div><div class="cell">Addresses muscle cause</div><div class="cell">Downtime</div><div class="cell">Time per visit</div><div class="cell">Main limitation</div>
+        </div>
+        <div class="ccol ccol--em" data-em-col>
+          <div class="chead"><small>Our recommendation</small><strong>EMFACE<sup class="reg">®</sup></strong></div>
+          <div class="cell">Retrains and rebalances jaw muscles with RF and HIFES</div>
+          <div class="cell"><i data-lucide="check"></i>No needles</div>
+          <div class="cell"><i data-lucide="check"></i>Yes, retrains muscles</div>
+          <div class="cell"><i data-lucide="check"></i>None</div>
+          <div class="cell"><i data-lucide="check"></i>About 20 minutes</div>
+          <div class="cell">Needs a series of sessions</div>
+        </div>
+        <div class="ccol">
+          <div class="chead"><strong>Botox</strong></div>
+          <div class="cell">Temporarily weakens the muscle</div><div class="cell">Injections</div><div class="cell">Weakens, does not retrain</div><div class="cell">Minimal</div><div class="cell">15 to 30 minutes</div><div class="cell">Wears off, repeat every few months</div>
+        </div>
+        <div class="ccol">
+          <div class="chead"><strong>Night guard</strong></div>
+          <div class="cell">Protects teeth from grinding at night</div><div class="cell">No needles</div><div class="cell">No, protects teeth only</div><div class="cell">None</div><div class="cell">Worn nightly</div><div class="cell">Symptom management, muscles stay tight</div>
+        </div>
+        <div class="ccol">
+          <div class="chead"><strong>Physical therapy</strong></div>
+          <div class="cell">Manual therapy and exercises</div><div class="cell">No needles</div><div class="cell">Partially, depends on home exercise</div><div class="cell">None</div><div class="cell">45 to 60 minutes, weekly</div><div class="cell">Slow, relies on daily consistency</div>
+        </div>
+      </div>
+    </div>
+    <div class="sec-cta" data-sb-reveal="stack">
+      <a class="btn btn--teal btn--lg" href="#contact" data-scroll>Claim my $250 off <i data-lucide="arrow-right"></i></a>
+      <div class="callstack"><small>Or call the office</small><a href="tel:+18577074435">(857) 707-4435</a></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section reviews" id="results">
+    <div class="rev-head">
+      <h2 class="h2 h2--light">Real patients,<span>real relief</span></h2>
+      <div class="badge" data-sb-reveal>
+        <b>4.9</b>
+        <div class="badge__stack"><div class="stars" aria-hidden="true"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div><span>331 Google reviews</span></div>
+      </div>
+    </div>
+    <div class="vids" data-sb-reveal="stack">
+      <div class="vid" data-video><video src="images/testimonial1.mp4" poster="images/testimonial1-poster.jpg" preload="metadata" playsinline></video><div class="vid__ui"><div class="vid__spacer"></div><button class="play" aria-label="Play video: My EMFACE® TMJ treatment"><i data-lucide="play"></i></button><p class="vid__cap">My EMFACE<sup class="reg">®</sup> TMJ treatment</p></div></div>
+      <div class="vid" data-video><video src="images/testimonial2-web.mp4" poster="images/testimonial2-poster.jpg" preload="metadata" playsinline></video><div class="vid__ui"><div class="vid__spacer"></div><button class="play" aria-label="Play video: Emily, after her fourth session"><i data-lucide="play"></i></button><p class="vid__cap">Emily, after her fourth session</p></div></div>
+      <div class="vid" data-video><video src="images/testimonial3.mp4" poster="images/testimonial3-poster.jpg" preload="metadata" playsinline></video><div class="vid__ui"><div class="vid__spacer"></div><button class="play" aria-label="Play video: How I feel during treatment"><i data-lucide="play"></i></button><p class="vid__cap">How I feel during treatment</p></div></div>
+      <div class="vid" data-video><video src="images/testimonial4-web.mp4" poster="images/testimonial4-poster.jpg" preload="metadata" playsinline></video><div class="vid__ui"><div class="vid__spacer"></div><button class="play" aria-label="Play video: The day after my first EMFACE® session"><i data-lucide="play"></i></button><p class="vid__cap">The day after my first EMFACE<sup class="reg">®</sup> session</p></div></div>
+    </div>
+    <div class="quotes" data-sb-reveal="stack">
+      <figure class="qcard"><div class="stars" aria-label="5 stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div><p>“Dr. Sara Stock and the team at Smile Brookline have completely changed my quality of life. After years of migraines and TMJ pain, Dr. Stock explored every avenue to help.”</p><figcaption class="qcard__by"><b>Emily</b><span>Smile Brookline patient</span></figcaption></figure>
+      <figure class="qcard"><div class="stars" aria-label="5 stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div><p>“I came in for EMFACE<sup class="reg">®</sup> TMJ treatment after struggling with severe, constant migraines and ongoing jaw tension. The results have been life-changing.”</p><figcaption class="qcard__by"><b>Google reviewer</b><span>EMFACE<sup class="reg">®</sup> patient</span></figcaption></figure>
+      <figure class="qcard"><div class="stars" aria-label="5 stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div><p>“My jaw feels noticeably more relaxed and my headaches are gone. The treatment itself is quick, comfortable and completely non-invasive.”</p><figcaption class="qcard__by"><b>Courtney M.</b><span>EMFACE<sup class="reg">®</sup> patient</span></figcaption></figure>
+      <figure class="qcard"><div class="stars" aria-label="5 stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div><p>“Everyone from the front desk to the hygienists and dentists is so friendly and knowledgeable. I'm so grateful for Dr. Stock's help with my TMJ symptoms.”</p><figcaption class="qcard__by"><b>Francesca</b><span>Smile Brookline patient</span></figcaption></figure>
+    </div>
+    <div class="sec-cta sec-cta--dark" data-sb-reveal="stack">
+      <a class="btn btn--white btn--lg" href="#contact" data-scroll>Start my relief <i data-lucide="arrow-right"></i></a>
+      <a class="sec-cta__link" href="#quiz" data-scroll>Are you a candidate? Take the quiz <i data-lucide="arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="quiz" id="quiz" data-quiz>
+    <div class="quiz__head">
+      <div class="quiz__title">
+        <h2 class="h2">Is EMFACE<sup class="reg">®</sup> right<span>for your jaw?</span></h2>
+        <p>Tap yes or no. It takes about 30 seconds.</p>
+      </div>
+      <div class="progress" aria-live="polite">
+        <span data-progress-text>0 of 5 answered</span>
+        <div class="progress__bar"><div class="progress__fill" data-progress-fill></div></div>
+      </div>
+    </div>
+    <div class="qrows" data-qrows data-sb-reveal="stack">
+      <div class="qrow" data-q><div class="qrow__q"><span class="qrow__ico"><i class="i-off" data-lucide="circle"></i><i class="i-on" data-lucide="circle-check"></i></span>Do you wake up with a sore or tired jaw?</div><div class="qrow__ans" role="group" aria-label="Answer"><button class="tile" data-a="yes" aria-pressed="false"><i data-lucide="check"></i>Yes</button><button class="tile" data-a="no" aria-pressed="false"><i data-lucide="check"></i>No</button></div></div>
+      <div class="qrow" data-q><div class="qrow__q"><span class="qrow__ico"><i class="i-off" data-lucide="circle"></i><i class="i-on" data-lucide="circle-check"></i></span>Does your jaw click, pop or lock?</div><div class="qrow__ans" role="group" aria-label="Answer"><button class="tile" data-a="yes" aria-pressed="false"><i data-lucide="check"></i>Yes</button><button class="tile" data-a="no" aria-pressed="false"><i data-lucide="check"></i>No</button></div></div>
+      <div class="qrow" data-q><div class="qrow__q"><span class="qrow__ico"><i class="i-off" data-lucide="circle"></i><i class="i-on" data-lucide="circle-check"></i></span>Do you get frequent headaches or migraines?</div><div class="qrow__ans" role="group" aria-label="Answer"><button class="tile" data-a="yes" aria-pressed="false"><i data-lucide="check"></i>Yes</button><button class="tile" data-a="no" aria-pressed="false"><i data-lucide="check"></i>No</button></div></div>
+      <div class="qrow" data-q><div class="qrow__q"><span class="qrow__ico"><i class="i-off" data-lucide="circle"></i><i class="i-on" data-lucide="circle-check"></i></span>Do you clench or grind your teeth?</div><div class="qrow__ans" role="group" aria-label="Answer"><button class="tile" data-a="yes" aria-pressed="false"><i data-lucide="check"></i>Yes</button><button class="tile" data-a="no" aria-pressed="false"><i data-lucide="check"></i>No</button></div></div>
+      <div class="qrow" data-q><div class="qrow__q"><span class="qrow__ico"><i class="i-off" data-lucide="circle"></i><i class="i-on" data-lucide="circle-check"></i></span>Have night guards or painkillers stopped being enough?</div><div class="qrow__ans" role="group" aria-label="Answer"><button class="tile" data-a="yes" aria-pressed="false"><i data-lucide="check"></i>Yes</button><button class="tile" data-a="no" aria-pressed="false"><i data-lucide="check"></i>No</button></div></div>
+    </div>
+    <div class="quiz__foot" data-quiz-foot>
+      <button class="btn btn--teal btn--md" type="button" data-quiz-submit>See my results <i data-lucide="arrow-right"></i></button>
+      <p class="quiz__hint" data-quiz-hint>Answer all 5 questions to see your results.</p>
+    </div>
+    <div class="result" data-result role="status" aria-live="polite">
+      <div class="result__main">
+        <div class="result__ico"><i data-lucide="circle-check"></i></div>
+        <div>
+          <h3 data-result-title>You are a <span>good candidate for EMFACE<sup class="reg">®</sup></span></h3>
+          <p data-result-body>Your answers match the jaw muscle symptoms EMFACE<sup class="reg">®</sup> is designed to treat. Book a consultation with Dr. Stock to confirm your plan and claim $250 off your first treatment.</p>
+        </div>
+      </div>
+      <div class="result__act">
+        <a class="btn btn--white btn--lg" href="#contact" data-scroll data-focus-form>Claim my $250 off <i data-lucide="arrow-right"></i></a>
+        <button class="result__retake" type="button" data-quiz-reset>Retake the quiz</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="form-card" data-sb-reveal>
+      <form class="form" data-form novalidate>
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <h2 class="h2">Claim your<span>$250 new patient offer</span></h2>
+          <p class="form-intro">$250 off your first EMFACE<sup class="reg">®</sup> treatment or a treatment package, plus your TMJ exam with Dr. Stock for $195 (regularly $300). Our team will call to book it.</p>
+          <div class="frow">
+            <div class="field"><label for="f-first">First name</label><input id="f-first" name="first_name" type="text" placeholder="Jane" autocomplete="given-name" required></div>
+            <div class="field"><label for="f-last">Last name</label><input id="f-last" name="last_name" type="text" placeholder="Smith" autocomplete="family-name" required></div>
+          </div>
+          <div class="frow">
+            <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" placeholder="(617) 555 0123" autocomplete="tel" required></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required></div>
+          </div>
+          <div class="field"><label for="f-msg">What's bothering you most?</label><textarea id="f-msg" name="message" placeholder="Tell us about your symptoms, how long you've had them and what you've tried so far."></textarea></div>
+          <label class="consent"><input type="checkbox" name="consent" checked required><span class="check"><i data-lucide="check"></i></span>I agree to be contacted by Smile Brookline by phone, text or email about my appointment.</label>
+          <p class="form-err" data-form-err>Please fill in your name, phone and email so our team can reach you.</p>
+          <button class="btn btn--teal submit" type="submit">Claim my $250 off <i data-lucide="arrow-right"></i></button>
+          <p class="fine">New patients only. $250 off applies to a single first treatment or a treatment package. TMJ exam $195, regularly $300. Cannot be combined with other offers.</p>
+        </div>
+      </form>
+    </div>
+    <div class="info" data-sb-reveal="stack">
+      <img class="info__logo" src="images/logo.png" alt="Smile Brookline">
+      <div class="info__row"><div class="icon-circle"><i data-lucide="map-pin"></i></div><div class="info__txt"><b>Visit us</b><a href="https://maps.app.goo.gl/5RkeGW81PHpE1C7V9" target="_blank" rel="noopener">1425 Beacon St, Brookline, MA 02446</a></div></div>
+      <div class="info__row"><div class="icon-circle"><i data-lucide="phone"></i></div><div class="info__txt"><b>Call us</b><a href="tel:+18577074435">(857) 707-4435</a></div></div>
+      <div class="info__row"><div class="icon-circle"><i data-lucide="clock-4"></i></div><div class="info__txt"><b>Hours</b><span>Mon 10:00 AM to 5:30 PM</span><span>Tue to Thu 8:00 AM to 6:00 PM</span><span>Fri 8:00 AM to 5:45 PM</span><span>Sat 8:00 AM to 2:30 PM, Sun closed</span></div></div>
+      <div class="map">
+        <iframe title="Smile Brookline on Google Maps" src="https://www.google.com/maps?q=Smile+Brookline,+1425+Beacon+St,+Brookline,+MA+02446&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <a class="map__chip" href="https://maps.app.goo.gl/5RkeGW81PHpE1C7V9" target="_blank" rel="noopener">Get directions <i data-lucide="arrow-up-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq">
+    <h2 class="h2">Questions patients<span>ask us about EMFACE<sup class="reg">®</sup></span></h2>
+    <div class="acc" data-acc data-sb-reveal="stack">
+      <div class="acc__item"><button class="acc__btn" aria-expanded="false"><span class="acc__q">What is EMFACE<sup class="reg">®</sup> and how does it help with TMJ/TMD?</span><span class="acc__tog"><i class="i-plus" data-lucide="plus"></i><i class="i-minus" data-lucide="minus"></i></span></button><div class="acc__panel"><p>EMFACE<sup class="reg">®</sup> uses a combination of radiofrequency and high-intensity facial muscle stimulation to target the muscles involved in TMJ/TMD. It helps overactive muscles relax and rebalance, which can ease jaw pain, tension and headaches.</p></div></div>
+      <div class="acc__item"><button class="acc__btn" aria-expanded="false"><span class="acc__q">How is EMFACE<sup class="reg">®</sup> different from Botox for TMJ?</span><span class="acc__tog"><i class="i-plus" data-lucide="plus"></i><i class="i-minus" data-lucide="minus"></i></span></button><div class="acc__panel"><p>Botox uses injections to temporarily weaken the jaw muscle, and it wears off, so it needs repeating every few months. EMFACE<sup class="reg">®</sup> uses no needles and works to retrain and rebalance the muscles behind your pain.</p></div></div>
+      <div class="acc__item"><button class="acc__btn" aria-expanded="false"><span class="acc__q">What does a treatment feel like?</span><span class="acc__tog"><i class="i-plus" data-lucide="plus"></i><i class="i-minus" data-lucide="minus"></i></span></button><div class="acc__panel"><p>You recline comfortably while you feel gentle warmth and rhythmic muscle contractions. There is nothing to numb and no needles.</p></div></div>
+      <div class="acc__item"><button class="acc__btn" aria-expanded="false"><span class="acc__q">How long does each session take?</span><span class="acc__tog"><i class="i-plus" data-lucide="plus"></i><i class="i-minus" data-lucide="minus"></i></span></button><div class="acc__panel"><p>About 20 minutes, so a session fits easily into a lunch break or between errands.</p></div></div>
+      <div class="acc__item"><button class="acc__btn" aria-expanded="false"><span class="acc__q">How many sessions will I need?</span><span class="acc__tog"><i class="i-plus" data-lucide="plus"></i><i class="i-minus" data-lucide="minus"></i></span></button><div class="acc__panel"><p>EMFACE<sup class="reg">®</sup> works as a series of sessions spaced over several weeks. Dr. Stock builds a custom plan at your consultation, and some patients feel a difference after just a few sessions.</p></div></div>
+      <div class="acc__item"><button class="acc__btn" aria-expanded="false"><span class="acc__q">How much is the TMJ exam?</span><span class="acc__tog"><i class="i-plus" data-lucide="plus"></i><i class="i-minus" data-lucide="minus"></i></span></button><div class="acc__panel"><p>Your TMJ exam with Dr. Stock is $195, discounted from $300. She assesses your jaw, bite and muscles and builds your treatment plan. New patients also get $250 off their first EMFACE<sup class="reg">®</sup> treatment or a treatment package.</p></div></div>
+      <div class="acc__item"><button class="acc__btn" aria-expanded="false"><span class="acc__q">Is there any downtime?</span><span class="acc__tog"><i class="i-plus" data-lucide="plus"></i><i class="i-minus" data-lucide="minus"></i></span></button><div class="acc__panel"><p>No. You can go straight back to work, errands or the gym right after your session.</p></div></div>
+      <div class="acc__item"><button class="acc__btn" aria-expanded="false"><span class="acc__q">Is EMFACE<sup class="reg">®</sup> safe?</span><span class="acc__tog"><i class="i-plus" data-lucide="plus"></i><i class="i-minus" data-lucide="minus"></i></span></button><div class="acc__panel"><p>EMFACE<sup class="reg">®</sup> is FDA-cleared for TMJ and is needle free. Dr. Stock reviews your health history and assesses your jaw at your consultation to make sure it is the right fit for you.</p></div></div>
+      <div class="acc__item"><button class="acc__btn" aria-expanded="false"><span class="acc__q">Can EMFACE<sup class="reg">®</sup> be combined with other TMJ treatments?</span><span class="acc__tog"><i class="i-plus" data-lucide="plus"></i><i class="i-minus" data-lucide="minus"></i></span></button><div class="acc__panel"><p>Yes. As your dentist, Dr. Stock can combine EMFACE<sup class="reg">®</sup> with oral appliances or night guard therapy and keep monitoring your bite and teeth over time.</p></div></div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta">
+    <div class="cta__copy" data-sb-reveal="stack">
+      <div class="cta__fig">$250</div>
+      <div class="cta__words">
+        <strong>off your first EMFACE<sup class="reg">®</sup><span>treatment or package</span></strong>
+        <small>Plus a $195 TMJ exam, regularly $300. New patients only. Cannot be combined with other offers.</small>
+      </div>
+    </div>
+    <div class="cta__act" data-sb-reveal="stack">
+      <a class="btn btn--white btn--lg" href="#contact" data-scroll>Book my consultation <i data-lucide="arrow-right"></i></a>
+      <a class="cta__phone" href="tel:+18577074435"><i data-lucide="phone"></i>or call (857) 707-4435</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__top" data-sb-reveal="stack">
+    <div class="foot__brand">
+      <a class="foot__logo-wrap" href="#top" data-scroll data-logo-glow aria-label="Back to top"><img class="foot__logo" src="images/logo-white.png" alt="Smile Brookline" loading="lazy"></a>
+      <div class="foot__award">
+        <img class="foot__badge" src="images/top-dentist-boston-2026-badge-web.png" alt="Boston Magazine 2026 Top Dentists" width="360" height="360" loading="lazy">
+        <p>All of our doctors were named <b>2026 Top Dentists</b> by Boston Magazine, October 2026 issue.</p>
+      </div>
+    </div>
+    <div class="foot__cols">
+      <div class="fcol"><b>Visit</b><a href="https://maps.app.goo.gl/5RkeGW81PHpE1C7V9" target="_blank" rel="noopener">1425 Beacon St<br>Brookline, MA 02446</a></div>
+      <div class="fcol"><b>Call</b><a href="tel:+18577074435">(857) 707-4435</a></div>
+      <div class="fcol"><b>Hours</b><span>Mon 10:00 AM to 5:30 PM</span><span>Tue to Thu 8:00 AM to 6:00 PM</span><span>Fri 8:00 AM to 5:45 PM</span><span>Sat 8:00 AM to 2:30 PM</span><span>Sun Closed</span></div>
+      <div class="fcol"><b>Follow</b>
+        <div class="socials">
+          <a href="https://www.facebook.com/SmileBrookline/" target="_blank" rel="noopener" aria-label="Smile Brookline on Facebook" data-social><i data-lucide="facebook"></i></a>
+          <a href="https://www.instagram.com/smilebrookline/" target="_blank" rel="noopener" aria-label="Smile Brookline on Instagram" data-social><i data-lucide="instagram"></i></a>
+          <a href="https://www.youtube.com/@smilebrookline-dr.sarastock" target="_blank" rel="noopener" aria-label="Smile Brookline on YouTube" data-social><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot__bottom">© 2026 Smile Brookline: Sara Stock DDS</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+<script>
+(function () {
+  "use strict";
+  if (window.lucide) lucide.createIcons({ attrs: { "stroke-width": 2 } });
+
+  var hasGsap = typeof window.gsap !== "undefined";
+  var REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var MOBILE = matchMedia("(max-width: 768px)").matches;
+  var TOUCH = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+  var LOW_END = MOBILE && navigator.hardwareConcurrency <= 4;
+  // Real hover (mouse / trackpad) = desktop. Everything else (phones, tablets) gets tap effects instead of hover.
+  var CAN_HOVER = matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* ---------- Hover on desktop, tap on tablet and mobile ---------- */
+  // Tap toggles the hover state on; tapping it again or tapping anywhere else turns it off.
+  var tapped = null;
+  function tapToggle(el, on, off) {
+    el.addEventListener("click", function (e) {
+      if (tapped && tapped.el === el) { tapped = null; off(e); return; }
+      if (tapped) { var prev = tapped; tapped = null; prev.off(); }
+      on(e); tapped = { el: el, off: off };
+    });
+  }
+  document.addEventListener("click", function (e) {
+    if (tapped && !tapped.el.contains(e.target)) { var prev = tapped; tapped = null; prev.off(); }
+  }, true);
+  function lift(el, y, d) { gsap.to(el, { y: y, duration: d || 0.32, ease: "power3.out", overwrite: "auto" }); }
+  function hoverOrTap(el, on, off) {
+    if (CAN_HOVER) { el.addEventListener("mouseenter", on); el.addEventListener("mouseleave", off); }
+    else tapToggle(el, on, off);
+  }
+  // Short press flash for things whose tap already does something (buttons, links, videos).
+  function hoverOrPress(el, on, off) {
+    if (CAN_HOVER) { el.addEventListener("mouseenter", on); el.addEventListener("mouseleave", off); return; }
+    var t;
+    el.addEventListener("pointerdown", function () { clearTimeout(t); on(); });
+    var release = function () { clearTimeout(t); t = setTimeout(off, 220); };
+    el.addEventListener("pointerup", release); el.addEventListener("pointercancel", release);
+  }
+
+  if (!hasGsap) { document.documentElement.classList.add("anim-failed"); }
+  else {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.config({ nullTargetWarn: false });
+    gsap.defaults({ ease: "power3.out", duration: LOW_END ? 0.4 : 0.6 });
+  }
+
+  /* ---------- Lenis smooth scroll ---------- */
+  var lenis = null;
+  if (hasGsap && window.Lenis && !REDUCED && !TOUCH) {
+    lenis = new Lenis({ duration: 1.2, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }, smoothWheel: true, touchMultiplier: 2 });
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+    gsap.ticker.lagSmoothing(0);
+    document.addEventListener("visibilitychange", function () { document.hidden ? lenis.stop() : lenis.start(); });
+  }
+  var bar = $("[data-bar]");
+  function scrollToEl(el, cb) {
+    var off = -((bar && bar.offsetHeight) || 0) + (MOBILE ? 0 : 8);
+    if (el.id === "contact") off = 0;
+    if (bar && bar.classList.contains("menu-open")) { var mb = $("[data-menu]"); if (mb) mb.click(); }
+    if (lenis) { lenis.start(); lenis.scrollTo(el, { duration: 1.2, offset: off, onComplete: cb }); }
+    else { window.scrollTo({ top: el.getBoundingClientRect().top + scrollY + off, behavior: REDUCED ? "auto" : "smooth" }); if (cb) setTimeout(cb, 700); }
+  }
+  $$("a[data-scroll]").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      var id = a.getAttribute("href"); var el = id && id.length > 1 && $(id); if (!el) return;
+      e.preventDefault();
+      scrollToEl(el, a.hasAttribute("data-focus-form") ? function () { var f = $("#f-first"); if (f) f.focus({ preventScroll: true }); } : null);
+    });
+  });
+  $$("[data-social]").forEach(function (a) { if (a.getAttribute("href") === "#") a.addEventListener("click", function (e) { e.preventDefault(); }); });
+
+  /* ---------- Header: solid after hero start, hide on scroll down, show on scroll up ---------- */
+  (function () {
+    if (!bar) return;
+    var lastY = scrollY, hidden = false;
+    function show(s) {
+      if (s === !hidden) return; hidden = !s;
+      if (hasGsap) gsap.to(bar, { yPercent: s ? 0 : -101, duration: 0.34, ease: "expo.out", overwrite: "auto" });
+      else bar.style.transform = s ? "" : "translateY(-101%)";
+    }
+    function onScroll() {
+      var y = Math.max(0, scrollY), d = y - lastY;
+      bar.classList.toggle("is-solid", y > 40);
+      show(true); lastY = y; void d; // header stays pinned while scrolling
+    }
+    if (lenis) lenis.on("scroll", onScroll); else addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  })();
+
+  /* ---------- Buttons: hover + press (guide A.1) ---------- */
+  if (hasGsap) {
+    var HOVER = { "btn--teal": ["#577C7C", "#3F6B66"], "btn--white": ["#FFFFFF", "#F1F6F5"] };
+    $$(".btn").forEach(function (b) {
+      var v = Object.keys(HOVER).find(function (k) { return b.classList.contains(k); }); if (!v) return;
+      var over = function () { if (!b.disabled) gsap.to(b, { backgroundColor: HOVER[v][1], duration: 0.2, ease: "power1.inOut", overwrite: "auto" }); };
+      var out = function () { gsap.to(b, { backgroundColor: HOVER[v][0], scale: 1, duration: 0.2, ease: "power1.inOut", overwrite: "auto" }); };
+      hoverOrPress(b, over, out);
+      b.addEventListener("focus", function () { if (b.matches(":focus-visible")) over(); });
+      b.addEventListener("blur", out);
+      b.addEventListener("pointerdown", function () { gsap.to(b, { scale: 0.98, duration: 0.1, ease: "power2.out" }); });
+      b.addEventListener("pointerup", function () { gsap.to(b, { scale: 1, duration: 0.1, ease: "power2.out" }); });
+      b.addEventListener("pointercancel", function () { gsap.to(b, { scale: 1, duration: 0.1, ease: "power2.out" }); });
+    });
+    // play buttons, socials, chip
+    $$("[data-video]").forEach(function (card) {
+      var p = $(".play", card);
+      hoverOrPress(card,
+        function () { gsap.to(p, { backgroundColor: "#F1F6F5", scale: CAN_HOVER ? 1 : 0.94, duration: 0.16, ease: "power1.inOut" }); gsap.to($("video", card), { scale: 1.03, duration: 0.6, ease: "power3.out" }); },
+        function () { gsap.to(p, { backgroundColor: "#FFFFFF", scale: 1, duration: 0.16, ease: "power1.inOut" }); gsap.to($("video", card), { scale: 1, duration: 0.6, ease: "power3.out" }); });
+    });
+    $$(".socials a").forEach(function (s) {
+      hoverOrPress(s,
+        function () { gsap.to(s, { backgroundColor: "#FFFFFF", color: "#23313B", duration: 0.2, ease: "power1.inOut" }); },
+        function () { gsap.to(s, { backgroundColor: "rgba(255,255,255,0.08)", color: "#FFFFFF", duration: 0.2, ease: "power1.inOut" }); });
+    });
+    // card lift + image zoom (guide 3.2)
+    $$("[data-hover-card]").forEach(function (c) {
+      var img = $("img", c);
+      var tl = gsap.timeline({ paused: true }).to(img, { scale: 1.05, duration: 0.52, ease: "power3.out" }, 0);
+      hoverOrTap(c, function () { lift(c, -4); tl.play(); }, function () { lift(c, 0); tl.reverse(); });
+    });
+  }
+
+  /* ---------- Hero intro (guide 7.1) ---------- */
+  function heroIntro() {
+    if (!hasGsap || REDUCED) { $$("[data-intro]").forEach(function (e) { e.style.opacity = 1; }); return; }
+    gsap.timeline({ defaults: { ease: "expo.out" } })
+      .from(bar, { yPercent: -100, duration: 0.56 }, 0)
+      .fromTo("[data-intro='media']", { autoAlpha: 0, scale: 1.04 }, { autoAlpha: 1, scale: 1, duration: 1.2 }, 0)
+      .fromTo("[data-intro='veil']", { autoAlpha: 0 }, { autoAlpha: 1, duration: 1.2 }, 0.12)
+      .fromTo("[data-intro='title']", { autoAlpha: 0, y: 28 }, { autoAlpha: 1, y: 0, duration: 1.0 }, 0.15)
+      .fromTo("[data-intro='item']", { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.8, stagger: 0.09 }, 0.32)
+      .fromTo("[data-intro='tile']", { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.9 }, 0.5);
+  }
+
+  /* ---------- Scroll reveals (guide 6.3, A.4) ---------- */
+  function reveals() {
+    if (!hasGsap || REDUCED) return;
+    var belowFold = function (el) { return el.getBoundingClientRect().top >= innerHeight; };
+    $$('[data-sb-reveal]:not([data-sb-reveal="media"])').filter(belowFold).forEach(function (el) {
+      var targets = el.dataset.sbReveal === "stack" ? Array.prototype.slice.call(el.children) : [el];
+      gsap.from(targets, { y: 36, autoAlpha: 0, duration: 0.9, ease: "power2.out",
+        stagger: function (i) { return Math.min(i, 8) * 0.09; },
+        scrollTrigger: { trigger: el, start: "top 86%", once: true } });
+    });
+    $$('[data-sb-reveal="media"]').filter(belowFold).forEach(function (el) {
+      gsap.from(el, { autoAlpha: 0, duration: 0.9, ease: "power2.out", scrollTrigger: { trigger: el, start: "top 86%", once: true } });
+      gsap.from(el, { scale: 1.03, duration: 1.3, ease: "power2.out", scrollTrigger: { trigger: el, start: "top 86%", once: true } });
+    });
+    $$("main h2").filter(function (el) { return belowFold(el) && !el.closest("[data-sb-reveal]"); }).forEach(function (el) {
+      gsap.from(el, { y: 40, autoAlpha: 0, duration: 0.9, ease: "expo.out", scrollTrigger: { trigger: el, start: "top bottom", once: true } });
+    });
+    // EMFACE® column gentle emphasis
+    var em = $("[data-em-col]");
+    if (em) gsap.from(em, { y: 24, duration: 1, ease: "expo.out", scrollTrigger: { trigger: em, start: "top 80%", once: true } });
+
+    // stat counters
+    $$("[data-count]").forEach(function (n, i) {
+      var end = parseFloat(n.dataset.count), suffix = n.dataset.suffix || "", dp = (n.dataset.count.split(".")[1] || "").length, o = { v: 0 };
+      n.textContent = (0).toFixed(dp) + suffix;
+      gsap.to(o, { v: end, duration: LOW_END ? 1 : 1.4, delay: i * 0.12 + 0.15, ease: "power2.out",
+        onUpdate: function () { n.textContent = o.v.toFixed(dp) + suffix; },
+        scrollTrigger: { trigger: n.closest("[data-stats]"), start: "top 85%", once: true } });
+    });
+
+    // parallax (desktop only, guide 6.5)
+    if (!MOBILE) {
+      $$("[data-parallax-img]").forEach(function (img) {
+        gsap.fromTo(img, { yPercent: -4 }, { yPercent: 4, ease: "none", scrollTrigger: { trigger: img.parentElement, start: "top bottom", end: "bottom top", scrub: 1 } });
+      });
+      $$(".why__img img, .bio__img img").forEach(function (img) {
+        gsap.fromTo(img, { scale: 1.08, yPercent: -3 }, { scale: 1.08, yPercent: 3, ease: "none", scrollTrigger: { trigger: img.parentElement, start: "top bottom", end: "bottom top", scrub: 1 } });
+      });
+    }
+
+    // breathing play button on first video (guide 8, fallback)
+    var p1 = $("[data-video] .play");
+    if (p1) {
+      var breathe = gsap.to(p1, { scale: 1.04, duration: 1.6, ease: "sine.inOut", repeat: -1, yoyo: true }), played = false;
+      var host = p1.closest("[data-video]");
+      if (CAN_HOVER) {
+        host.addEventListener("mouseenter", function () { breathe.pause(); });
+        host.addEventListener("mouseleave", function () { if (!played) breathe.resume(); });
+      }
+      host.addEventListener("click", function () { played = true; breathe.kill(); gsap.set(p1, { scale: 1 }); }, { once: true });
+    }
+  }
+
+  /* ---------- Testimonial videos: one at a time ---------- */
+  var vids = $$("[data-video]");
+  vids.forEach(function (card) {
+    var v = $("video", card);
+    card.addEventListener("click", function () {
+      if (v.paused) {
+        vids.forEach(function (o) { if (o !== card) { var ov = $("video", o); ov.pause(); o.classList.remove("is-playing"); } });
+        v.play(); card.classList.add("is-playing"); v.setAttribute("controls", "");
+      } else { v.pause(); card.classList.remove("is-playing"); }
+    });
+    v.addEventListener("ended", function () { card.classList.remove("is-playing"); v.removeAttribute("controls"); v.currentTime = 0; });
+  });
+
+  /* ---------- FAQ accordion ---------- */
+  $$("[data-acc] .acc__item").forEach(function (item, idx, all) {
+    var btn = $(".acc__btn", item), panel = $(".acc__panel", item);
+    btn.addEventListener("click", function () {
+      var open = item.classList.contains("is-open");
+      all.forEach(function (o) {
+        if (o !== item && o.classList.contains("is-open")) toggle(o, false);
+      });
+      toggle(item, !open);
+    });
+    function toggle(it, on) {
+      var p = $(".acc__panel", it), b = $(".acc__btn", it);
+      b.setAttribute("aria-expanded", on ? "true" : "false");
+      if (!hasGsap || REDUCED) { it.classList.toggle("is-open", on); p.style.height = on ? "auto" : "0px"; return; }
+      if (on) {
+        it.classList.add("is-open");
+        gsap.fromTo(p, { height: 0 }, { height: "auto", duration: 0.45, ease: "power3.out", overwrite: true, onComplete: function () { ScrollTrigger.refresh(); } });
+        gsap.fromTo($("p", p), { y: 8, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.4, delay: 0.08, ease: "power2.out" });
+      } else {
+        gsap.set(p, { height: p.offsetHeight });
+        it.classList.remove("is-open");
+        gsap.to(p, { height: 0, duration: 0.35, ease: "power2.inOut", overwrite: true, onComplete: function () { gsap.set(p, { clearProps: "height" }); ScrollTrigger.refresh(); } });
+      }
+    }
+  });
+
+  /* ---------- Quiz ---------- */
+  (function () {
+    var quiz = $("[data-quiz]"); if (!quiz) return;
+    var rows = $$("[data-q]", quiz), total = rows.length;
+    var txt = $("[data-progress-text]", quiz), fill = $("[data-progress-fill]", quiz);
+    var submit = $("[data-quiz-submit]", quiz), hint = $("[data-quiz-hint]", quiz);
+    var rowsWrap = $("[data-qrows]", quiz), foot = $("[data-quiz-foot]", quiz), result = $("[data-result]", quiz);
+    var answers = new Array(total).fill(null);
+
+    function update() {
+      var n = answers.filter(function (a) { return a !== null; }).length;
+      txt.textContent = n + " of " + total + " answered";
+      if (hasGsap) gsap.to(fill, { scaleX: n / total, duration: 0.5, ease: "power3.out" }); else fill.style.transform = "scaleX(" + n / total + ")";
+      if (n === total && hasGsap) gsap.to(hint, { autoAlpha: 0, duration: 0.2 });
+    }
+    rows.forEach(function (row, i) {
+      var ico = $(".i-on", row), off = $(".i-off", row);
+      $$(".tile", row).forEach(function (t) {
+        t.addEventListener("click", function () {
+          var first = answers[i] === null;
+          answers[i] = t.dataset.a;
+          $$(".tile", row).forEach(function (o) { var on = o === t; o.classList.toggle("is-on", on); o.setAttribute("aria-pressed", on ? "true" : "false"); });
+          row.classList.add("is-answered"); row.classList.remove("shake");
+          if (hasGsap) {
+            gsap.fromTo(t, { scale: 0.96 }, { scale: 1, duration: 0.25, ease: "power2.out" });
+            if (first) { gsap.to(off, { autoAlpha: 0, scale: 0.6, duration: 0.2 }); gsap.to(ico, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }); }
+          } else { off.style.opacity = 0; ico.style.opacity = 1; ico.style.transform = "none"; }
+          update();
+        });
+      });
+    });
+    submit.addEventListener("click", function () {
+      var missing = rows.filter(function (r, i) { return answers[i] === null; });
+      if (missing.length) {
+        if (hasGsap) {
+          gsap.to(hint, { autoAlpha: 1, duration: 0.2 });
+          missing.forEach(function (r) { r.classList.add("shake"); gsap.fromTo(r, { x: -6 }, { x: 0, duration: 0.5, ease: "elastic.out(1,0.3)" }); });
+        } else { hint.style.opacity = 1; }
+        return;
+      }
+      var yes = answers.filter(function (a) { return a === "yes"; }).length;
+      var title = $("[data-result-title]", result), body = $("[data-result-body]", result);
+      if (yes > 0) {
+        title.innerHTML = "You are a <span>good candidate for EMFACE®</span>";
+        body.textContent = "You answered yes to " + yes + " of " + total + " questions. Those are the jaw muscle symptoms EMFACE® is designed to treat. Book a consultation with Dr. Stock to confirm your plan and claim $250 off your first treatment.";
+      } else {
+        title.innerHTML = "You may still be a <span>good candidate for EMFACE®</span>";
+        body.textContent = "Your jaw sounds fairly calm right now, but TMJ often shows up in ways that are easy to miss. A quick consultation with Dr. Stock will tell you for sure, and new patients get $250 off.";
+      }
+      var showResult = function () {
+        rowsWrap.style.display = "none"; foot.style.display = "none";
+        result.classList.add("is-shown");
+        if (hasGsap && !REDUCED) {
+          gsap.fromTo(result, { autoAlpha: 0, y: 24, scale: 0.98 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.7, ease: "expo.out" });
+          gsap.fromTo($$(".result__ico, .result h3, .result p, .result__act > *", result), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.08, delay: 0.15, ease: "power2.out" });
+        }
+        if (window.ScrollTrigger) ScrollTrigger.refresh();
+      };
+      if (hasGsap && !REDUCED) gsap.to([rowsWrap, foot], { autoAlpha: 0, y: -12, duration: 0.3, ease: "power2.in", onComplete: showResult });
+      else showResult();
+    });
+    $("[data-quiz-reset]", quiz).addEventListener("click", function () {
+      answers.fill(null);
+      rows.forEach(function (r) {
+        r.classList.remove("is-answered", "shake");
+        $$(".tile", r).forEach(function (t) { t.classList.remove("is-on"); t.setAttribute("aria-pressed", "false"); });
+        if (hasGsap) { gsap.set($(".i-on", r), { opacity: 0, scale: 0.6 }); gsap.set($(".i-off", r), { autoAlpha: 1, scale: 1 }); }
+      });
+      result.classList.remove("is-shown");
+      rowsWrap.style.display = ""; foot.style.display = "";
+      if (hasGsap) { gsap.set([rowsWrap, foot], { autoAlpha: 1, y: 0 }); gsap.set(hint, { autoAlpha: 0 }); gsap.from(rowsWrap.children, { y: 16, autoAlpha: 0, duration: 0.5, stagger: 0.06, ease: "power2.out" }); }
+      update();
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
+    });
+    update();
+  })();
+
+  /* ---------- Contact form ---------- */
+  (function () {
+    var form = $("[data-form]"); if (!form) return;
+    var err = $("[data-form-err]", form), btn = $(".submit", form);
+    $$(".field input, .field textarea", form).forEach(function (inp) {
+      var label = inp.closest(".field").querySelector("label");
+      inp.addEventListener("focus", function () { if (hasGsap) gsap.to(label, { y: -2, color: "#577C7C", duration: 0.18, ease: "power2.out" }); });
+      inp.addEventListener("blur", function () { if (hasGsap) gsap.to(label, { y: 0, color: "#374953", duration: 0.18, ease: "power2.out" }); });
+      inp.addEventListener("input", function () { inp.closest(".field").classList.remove("is-invalid"); });
+    });
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var bad = [];
+      ["f-first", "f-last", "f-phone", "f-email"].forEach(function (id) {
+        var el = $("#" + id, form), v = el.value.trim();
+        var ok = v.length > 0 && (id !== "f-email" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) && (id !== "f-phone" || v.replace(/\D/g, "").length >= 10);
+        el.closest(".field").classList.toggle("is-invalid", !ok); if (!ok) bad.push(el);
+      });
+      var consent = form.querySelector("input[name=consent]");
+      if (bad.length || !consent.checked) {
+        err.style.display = "block";
+        err.textContent = !consent.checked && !bad.length ? "Please agree to be contacted so our team can call you." : "Please fill in your name, phone and email so our team can reach you.";
+        if (hasGsap) gsap.fromTo(err, { x: -4 }, { x: 0, duration: 0.4, ease: "elastic.out(1,0.3)" });
+        if (bad[0]) bad[0].focus();
+        return;
+      }
+      err.style.display = "none";
+      // Loading state (guide 5.1)
+      btn.disabled = true; btn.style.width = btn.offsetWidth + "px";
+      btn.innerHTML = '<span class="spin" aria-hidden="true"></span><span class="sr-only">Sending</span>';
+      if (hasGsap) gsap.to($(".spin", btn), { rotation: 360, duration: 0.8, ease: "none", repeat: -1 });
+      // TODO: connect to the practice CRM or form endpoint here.
+      setTimeout(function () {
+        var card = form.parentElement;
+        var ok = document.createElement("div"); ok.className = "form-success"; ok.setAttribute("role", "status");
+        ok.innerHTML = '<div class="result__ico"><i data-lucide="circle-check"></i></div><h3>Thank you, <span>your request is in.</span></h3><p>Our team will call you shortly to book your $195 TMJ exam with Dr. Stock and apply your $250 new patient offer. Need us sooner? Call <a href="tel:+18577074435" style="color:#3F6B66;font-weight:600">(857) 707-4435</a>.</p>';
+        form.replaceWith(ok);
+        if (window.lucide) lucide.createIcons();
+        if (hasGsap) gsap.from(ok.children, { autoAlpha: 0, y: 10, duration: 0.35, stagger: 0.08, ease: "power2.out" });
+        if (window.ScrollTrigger) ScrollTrigger.refresh();
+      }, 900);
+    });
+  })();
+
+  /* ---------- Mobile menu ---------- */
+  (function () {
+    var btn = $("[data-menu]"), nav = $("[data-mnav]"); if (!btn || !nav) return;
+    function set(open) {
+      bar.classList.toggle("menu-open", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      if (open) { bar.classList.add("is-solid"); if (lenis) lenis.stop(); if (hasGsap && !REDUCED) { gsap.fromTo(nav, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.2, ease: "power1.inOut" }); gsap.fromTo(nav.children, { y: 16, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.4, stagger: 0.06, ease: "power3.out" }); } }
+      else { if (lenis) lenis.start(); bar.classList.toggle("is-solid", scrollY > 40); }
+    }
+    btn.addEventListener("click", function () { set(!bar.classList.contains("menu-open")); });
+    $$("a:not([data-scroll])", nav).forEach(function (a) { a.addEventListener("click", function () { set(false); }); });
+    addEventListener("keydown", function (e) { if (e.key === "Escape" && bar.classList.contains("menu-open")) { set(false); btn.focus(); } });
+  })();
+
+  /* ---------- Active nav link ---------- */
+  if (hasGsap) {
+    ["symptoms", "results", "quiz"].forEach(function (id) {
+      var sec = document.getElementById(id); if (!sec) return;
+      ScrollTrigger.create({ trigger: sec, start: "top 45%", end: "bottom 45%",
+        onToggle: function (st) { $$('.bar__nav a[href="#' + id + '"]').forEach(function (a) { a.classList.toggle("is-active", st.isActive); }); } });
+    });
+  }
+
+  /* ---------- Icon line drawing helpers ---------- */
+  function strokes(svg) { return $$("path, circle, ellipse, line, polyline, polygon, rect", svg); }
+  function prepIcon(svg) {
+    strokes(svg).forEach(function (el) {
+      var len = 0; try { len = el.getTotalLength(); } catch (e) { len = 200; }
+      el.dataset.len = Math.ceil(len) + 1;
+      el.style.strokeDasharray = el.dataset.len; el.style.strokeDashoffset = 0;
+    });
+  }
+  function drawIcon(svg, dur, from) {
+    var els = strokes(svg);
+    return gsap.fromTo(els, { strokeDashoffset: function (i, el) { return from === false ? 0 : el.dataset.len; } },
+      { strokeDashoffset: 0, duration: dur || 1, ease: "power2.inOut", stagger: { each: 0.04, from: "start" }, overwrite: true });
+  }
+  var ICONS_OK = hasGsap && !REDUCED;
+  if (ICONS_OK) {
+    $$(".ico").forEach(prepIcon);
+    // appear: draw every icon as its group scrolls in
+    $$(".steps, .phases").forEach(function (group) {
+      var icons = $$(".ico", group);
+      icons.forEach(function (svg) { strokes(svg).forEach(function (el) { el.style.strokeDashoffset = el.dataset.len; }); });
+      gsap.set($$(".icon-circle", group), { scale: 0.6, autoAlpha: 0 });
+      ScrollTrigger.create({ trigger: group, start: "top 80%", once: true, onEnter: function () {
+        gsap.to($$(".icon-circle", group), { scale: 1, autoAlpha: 1, duration: 0.7, ease: "back.out(1.8)", stagger: 0.12 });
+        icons.forEach(function (svg, i) { gsap.delayedCall(0.15 + i * 0.12, function () { drawIcon(svg, 1.3); }); });
+      } });
+    });
+  }
+
+  /* ---------- Hover effects ---------- */
+  if (hasGsap) {
+    // Glass offer card: lift, sheen sweep, cursor light, icon wiggle
+    var offer = $("[data-offer]");
+    if (offer) {
+      var glow = $(".offer__glow", offer), sheen = $(".offer__sheen", offer), gift = $(".offer__top svg", offer), amt = $(".offer__amt b", offer);
+      var offerOn = function (e) {
+        if (e && e.clientX != null) { var r0 = offer.getBoundingClientRect(); offer.style.setProperty("--mx", (e.clientX - r0.left) + "px"); offer.style.setProperty("--my", (e.clientY - r0.top) + "px"); }
+        gsap.to(offer, { y: -6, backgroundColor: "rgba(255,255,255,0.18)", borderColor: "rgba(255,255,255,0.45)", boxShadow: "inset 0 1px 0 rgba(255,255,255,0.4), 0 34px 70px -30px rgba(27,38,46,0.95)", duration: 0.4, ease: "power3.out", overwrite: "auto" });
+        gsap.to(glow, { opacity: 1, duration: 0.35 });
+        gsap.fromTo(sheen, { xPercent: -120, skewX: -12, autoAlpha: 1 }, { xPercent: 200, duration: 1.1, ease: "power2.inOut", onComplete: function () { gsap.set(sheen, { autoAlpha: 0 }); } });
+        gsap.fromTo(gift, { rotation: 0 }, { keyframes: [{ rotation: -14, duration: 0.12 }, { rotation: 10, duration: 0.12 }, { rotation: -6, duration: 0.1 }, { rotation: 0, duration: 0.12 }], ease: "power1.inOut" });
+        gsap.fromTo(amt, { scale: 1 }, { scale: 1.06, duration: 0.3, ease: "power2.out", yoyo: true, repeat: 1, transformOrigin: "left bottom" });
+      };
+      if (CAN_HOVER) offer.addEventListener("mousemove", function (e) { var r = offer.getBoundingClientRect(); offer.style.setProperty("--mx", (e.clientX - r.left) + "px"); offer.style.setProperty("--my", (e.clientY - r.top) + "px"); });
+      var offerOff = function () {
+        gsap.to(offer, { y: 0, backgroundColor: "rgba(255,255,255,0.12)", borderColor: "rgba(255,255,255,0.26)", boxShadow: "inset 0 1px 0 rgba(255,255,255,0.28), 0 24px 60px -30px rgba(27,38,46,0.8)", duration: 0.45, ease: "power3.out", overwrite: "auto" });
+        gsap.to(glow, { opacity: 0, duration: 0.35 });
+      };
+      hoverOrTap(offer, offerOn, offerOff);
+    }
+
+    // How it works steps
+    $$("[data-step]").forEach(function (st) {
+      var bg = $(".step__bg", st), line = $(".step__line", st), circ = $(".icon-circle", st), svg = $(".ico", st), h = $("h3", st), p = $("p", st);
+      var tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } })
+        .to(bg, { opacity: 1, duration: 0.3, ease: "power1.inOut" }, 0)
+        .to(line, { scaleX: 1, duration: 0.5 }, 0)
+        .to(circ, { scale: 1.08, backgroundColor: "rgba(168,196,193,0.22)", color: "#FFFFFF", duration: 0.35 }, 0)
+        .to(p, { color: "#FFFFFF", duration: 0.25, ease: "power1.inOut" }, 0)
+        .to(h, { x: 4, duration: 0.3 }, 0);
+      hoverOrTap(st, function () { lift(st, -6, 0.35); tl.play(); if (ICONS_OK && svg) drawIcon(svg, 0.9); }, function () { lift(st, 0, 0.35); tl.reverse(); });
+    });
+
+    // What to expect phases
+    $$("[data-phase]").forEach(function (ph) {
+      var circ = $(".icon-circle", ph), svg = $(".ico", ph), h = $("h3", ph), fig = $(".phase__fig b", ph);
+      var tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } })
+        .to(ph, { boxShadow: "0 18px 40px -24px rgba(34,48,58,0.35)", duration: 0.32 }, 0)
+        .to(circ, { scale: 1.08, rotation: -6, duration: 0.4 }, 0)
+        .to(h, { x: 4, color: "#3F6B66", duration: 0.3 }, 0)
+        .to(fig, { x: -6, color: "#936F38", duration: 0.35 }, 0);
+      hoverOrTap(ph, function () { ph.classList.add("is-hot"); lift(ph, -4); tl.play(); if (ICONS_OK && svg) drawIcon(svg, 0.9); }, function () { ph.classList.remove("is-hot"); lift(ph, 0); tl.reverse(); });
+    });
+
+    // Comparison rows: sliding band + highlighted cells across all columns
+    var table = $("[data-ctable]");
+    if (table) {
+      var band = $("[data-band]", table), cols = $$(".ccol", table), bandOn = false;
+      var labelCells = $$(".ccol--labels .cell", table);
+      var rowCells = function (i) { return cols.map(function (c) { return $$(".cell", c)[i]; }).filter(Boolean); };
+      var labelSpans = labelCells.map(function (c) { var sp = document.createElement("span"); while (c.firstChild) sp.appendChild(c.firstChild); c.appendChild(sp); return sp; });
+      var hotRow = -1;
+      var clearRows = function () {
+        hotRow = -1; bandOn = false; gsap.to(band, { opacity: 0, duration: 0.25 });
+        $$(".cell.is-hot", table).forEach(function (x) { x.classList.remove("is-hot"); });
+        gsap.to(labelSpans, { x: 0, duration: 0.3, ease: "power3.out" });
+      };
+      cols.forEach(function (c) {
+        $$(".cell", c).forEach(function (cell, i) {
+          var hotOn = function () {
+            hotRow = i;
+            $$(".cell.is-hot", table).forEach(function (x) { x.classList.remove("is-hot"); });
+            rowCells(i).forEach(function (x) { x.classList.add("is-hot"); });
+            var lc = labelCells[i], top = lc.getBoundingClientRect().top - table.getBoundingClientRect().top;
+            gsap.to(band, { y: top, opacity: 1, duration: bandOn ? 0.35 : 0.2, ease: "power3.out", overwrite: "auto" });
+            if (!bandOn) gsap.set(band, { y: top });
+            bandOn = true;
+            labelSpans.forEach(function (sp, k) { gsap.to(sp, { x: k === i ? 8 : 0, duration: 0.3, ease: "power3.out", overwrite: "auto" }); });
+            var chk = rowCells(i).map(function (x) { return $("svg", x); }).filter(Boolean);
+            if (chk.length) gsap.fromTo(chk, { scale: 0.6 }, { scale: 1, duration: 0.4, ease: "back.out(2.5)" });
+          };
+          if (CAN_HOVER) cell.addEventListener("mouseenter", hotOn);
+          else tapToggle(cell, function () { if (hotRow !== i) hotOn(); }, clearRows);
+        });
+      });
+      if (CAN_HOVER) table.addEventListener("mouseleave", clearRows);
+    }
+
+    // Review quote cards
+    $$(".qcard").forEach(function (q) {
+      var stars = $$(".stars svg", q);
+      hoverOrTap(q, function () {
+        q.classList.add("is-hot"); lift(q, -6);
+        gsap.fromTo(stars, { scale: 0.5, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.45, ease: "back.out(2.2)", stagger: 0.05, overwrite: true });
+      }, function () { q.classList.remove("is-hot"); lift(q, 0); gsap.to(stars, { scale: 1, rotation: 0, duration: 0.25, overwrite: true }); });
+    });
+
+    // Footer logo glow
+    var lg = $("[data-logo-glow]");
+    if (lg) {
+      var img = $("img", lg), pulse = null;
+      gsap.set(img, { filter: "drop-shadow(0 0 0px rgba(168,196,193,0))" });
+      var glowOn = function () {
+        if (pulse) pulse.kill();
+        pulse = gsap.timeline()
+          .to(img, { filter: "drop-shadow(0 0 16px rgba(168,196,193,0.85))", scale: 1.03, duration: 0.45, ease: "power2.out" })
+          .to(img, { filter: "drop-shadow(0 0 28px rgba(168,196,193,0.55))", duration: 1.2, ease: "sine.inOut", repeat: -1, yoyo: true });
+      };
+      var glowOff = function () {
+        if (pulse) pulse.kill();
+        gsap.to(img, { filter: "drop-shadow(0 0 0px rgba(168,196,193,0))", scale: 1, duration: 0.5, ease: "power2.out" });
+      };
+      if (CAN_HOVER) { lg.addEventListener("mouseenter", glowOn); lg.addEventListener("mouseleave", glowOff); }
+      else { var gT; lg.addEventListener("click", function () { clearTimeout(gT); glowOn(); gT = setTimeout(glowOff, 1600); }); }
+    }
+  }
+
+  /* ---------- Boot ---------- */
+  heroIntro();
+  reveals();
+  if (hasGsap) {
+    addEventListener("load", function () { ScrollTrigger.refresh(); });
+    var rT; addEventListener("resize", function () { clearTimeout(rT); rT = setTimeout(function () { ScrollTrigger.refresh(); }, 200); });
+  }
+  window.__animationsBooted = true;
+})();
+</script>
+</body>
+</html>
